@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@theme {
+  /* NEXBOND brand palette */
+  --color-ink: #1a1a1a;
+  --color-gold: #d4a520;
+  --color-gold-light: #e8bc3f;
+  --color-cream: #faf8f5;
+  --color-coal: #2d2d2d;
+  --color-warmgrey: #8a8a8a;
+
+  /* Typography */
+  --font-display: var(--font-barlow), "Arial Narrow", sans-serif;
+  --font-body: var(--font-dm-sans), Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+@layer components {
+  /* Uppercase letter-spaced section label */
+  .section-label {
+    @apply inline-block text-xs font-semibold uppercase tracking-[0.3em] text-gold;
+  }
+
+  /* Display headline base */
+  .headline {
+    font-family: var(--font-display);
+    @apply font-semibold uppercase leading-[0.95] tracking-tight;
+  }
+
+  /* Button with gold fill sweeping in from the left on hover */
+  .btn-sweep {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-sweep::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--sweep-color, var(--color-gold));
+    transform: translateX(-101%);
+    transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .btn-sweep:hover::before,
+  .btn-sweep:focus-visible::before {
+    transform: translateX(0);
+  }
+}
+
+/* ========================================================================
+   HERO — "The Unroll Reveal"
+   ======================================================================== */
+
+:root {
+  --hero-bg: #1a1a1a;
+  --hero-bg-deep: #111111;
+  --gold-primary: #d4a520;
+  --gold-light: #e8c547;
+  --gold-dark: #b8860b;
+  --gold-glow: rgba(212, 165, 32, 0.35);
+  --tape-body-color: #c8a84e;
+  --tape-core-color: #8b7355;
+}
+
+/* Living background: oversized gradient layer that slowly rotates */
+.hero-bg-layer {
+  position: absolute;
+  inset: -60%;
+  background: linear-gradient(
+    160deg,
+    #1a1a1a 0%,
+    #0d0d0d 40%,
+    #1a1a1a 70%,
+    #2d2d2d 100%
+  );
+  animation: hero-bg-rotate 60s linear infinite;
+  will-change: transform;
+}
+@keyframes hero-bg-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Elements hidden until the GSAP timeline reveals them */
+.hero-item,
+.roll-stage {
+  opacity: 0;
+}
+
+/* Brand name starts fully masked; the unroll reveals it.
+   Desktop: left→right. Mobile: top→bottom. */
+.brand-clip {
+  clip-path: inset(0 100% 0 0);
+}
+@media (max-width: 767px) {
+  .brand-clip {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+/* Shimmer sweep across the brand name (phase 3) */
+.brand-shimmer {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  opacity: 0;
+  transform: skewX(-20deg);
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Golden radial glow behind the 3D roll */
+.hero-glow {
+  position: absolute;
+  inset: -18%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 65%);
+  filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Low-end device fallback: static roll with a gentle CSS float */
+.roll-fallback {
+  animation: hero-float 3s ease-in-out infinite;
+}
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Scroll indicator */
+.scroll-line {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+@keyframes scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Reduced motion: everything lands in its final state, nothing moves */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-layer,
+  .roll-fallback,
+  .scroll-line {
+    animation: none;
+  }
+  .hero-item,
+  .roll-stage {
+    opacity: 1;
+  }
+  .brand-clip {
+    clip-path: none;
+  }
+}

@@ -145,26 +145,31 @@ export function useHeroAnimation(
       });
 
       /* ---------- Scroll-out transitions ---------- */
+      // Numeric scrub interpolates toward the scroll position instead of
+      // snapping every frame — noticeably smoother while scrolling.
+      gsap.set([".hero-copy", ".roll-col"], { willChange: "transform, opacity" });
       gsap.to(".hero-copy", {
         scrollTrigger: {
           trigger: scope.current,
           start: "top top",
           end: "bottom top",
-          scrub: true,
+          scrub: 0.6,
         },
         y: -80,
         opacity: 0,
+        force3D: true,
       });
       gsap.to(".roll-col", {
         scrollTrigger: {
           trigger: scope.current,
           start: "top top",
           end: "bottom top",
-          scrub: true,
+          scrub: 0.6,
         },
         y: -100,
         scale: 0.7,
         opacity: 0,
+        force3D: true,
       });
     }, scope);
 

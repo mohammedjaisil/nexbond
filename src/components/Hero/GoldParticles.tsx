@@ -27,11 +27,17 @@ function spawn(w: number, h: number, now: number, atBottom = false): Particle {
 }
 
 /** Subtle 2D gold particle field — separate canvas layer, not in the 3D scene. */
-export function GoldParticles({ disabled }: { disabled: boolean }) {
+export function GoldParticles({
+  disabled,
+  paused = false,
+}: {
+  disabled: boolean;
+  paused?: boolean;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    if (disabled) return;
+    if (disabled || paused) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -83,7 +89,7 @@ export function GoldParticles({ disabled }: { disabled: boolean }) {
       cancelAnimationFrame(raf);
       ro.disconnect();
     };
-  }, [disabled]);
+  }, [disabled, paused]);
 
   if (disabled) return null;
   return (
@@ -91,7 +97,7 @@ export function GoldParticles({ disabled }: { disabled: boolean }) {
       ref={canvasRef}
       aria-hidden
       role="presentation"
-      className="pointer-events-none absolute inset-0 z-[5]"
+      className="pointer-events-none absolute inset-0 z-5"
     />
   );
 }

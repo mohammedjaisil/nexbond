@@ -69,6 +69,7 @@ export function WhyNexbond() {
               alt="NEXBOND masking tape roll measured with a measuring tape — true size guaranteed"
               width={1400}
               height={1980}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="h-150 w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>

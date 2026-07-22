@@ -26,6 +26,20 @@ export function Hero() {
 
   const [caps, setCaps] = useState<Caps>("pending");
   const [reduced, setReduced] = useState(false);
+  const [inView, setInView] = useState(true);
+
+  // Pause all continuous hero work (WebGL loop, particles, bg rotation)
+  // once the hero is scrolled out of view — keeps scrolling smooth.
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   // Always start at the top on reload so the intro plays from the hero —
   // otherwise the browser restores the previous scroll position mid-page.
@@ -92,7 +106,9 @@ export function Hero() {
       ref={sectionRef}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
-      className="relative flex min-h-svh max-h-[1000px] flex-col justify-center overflow-hidden bg-ink pt-20"
+      className={`relative flex min-h-svh max-h-[1000px] flex-col justify-center overflow-hidden bg-ink pt-20 ${
+        inView ? "" : "hero-paused"
+      }`}
       style={{ minHeight: "max(100svh, 700px)" }}
     >
       {/* No-JS: everything visible, nothing animated */}
@@ -107,7 +123,7 @@ export function Hero() {
       <div aria-hidden className="hero-bg-layer" />
 
       {/* Gold particle field */}
-      <GoldParticles disabled={reduced || caps === "low"} />
+      <GoldParticles disabled={reduced || caps === "low"} paused={!inView} />
 
       {/* Unrolling tape strip overlay */}
       <TapeStripReveal />
@@ -168,6 +184,7 @@ export function Hero() {
                 motion={motionRef}
                 mouse={mouseRef}
                 reduced={reduced}
+                paused={!inView}
               />
             )}
             {(caps === "low" || reduced) && (

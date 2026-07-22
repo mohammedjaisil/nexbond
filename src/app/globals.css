@@ -99,6 +99,11 @@ body {
   }
 }
 
+/* Hero scrolled out of view: stop the rotating background layer */
+.hero-paused .hero-bg-layer {
+  animation-play-state: paused;
+}
+
 /* Elements hidden until the GSAP timeline reveals them */
 .hero-item,
 .roll-stage {

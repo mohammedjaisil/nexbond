@@ -188,13 +188,17 @@ export default function TapeRollScene({
   motion,
   mouse,
   reduced,
+  paused = false,
 }: {
   motion: RefObject<HeroMotion>;
   mouse: RefObject<MousePoint>;
   reduced: boolean;
+  paused?: boolean;
 }) {
   return (
     <Canvas
+      // Stop the render loop entirely while the hero is off-screen
+      frameloop={paused ? "never" : "always"}
       dpr={[1, 2]}
       camera={{ fov: 45, near: 0.1, far: 100, position: [0, -0.3, 7.6] }}
       gl={{ antialias: true, alpha: true }}

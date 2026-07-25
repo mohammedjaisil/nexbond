@@ -210,6 +210,38 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
+    slug: "directional-wayfinding-signs",
+    name: "Directional & Wayfinding Signs",
+    category: "Signage",
+    image: "/images/directional-signage.webp",
+    tagline: "Point the Way",
+    description:
+      "Custom directional and wayfinding signage on reflective aluminium.",
+    longDescription:
+      "NEXBOND Directional & Wayfinding Signs guide traffic and visitors with clarity. Printed on rust-proof aluminium with reflective sheeting and mounted on galvanized posts, they're made to any size, colour or legend — from highway guide signs to car-park and facility wayfinding.",
+    cardSpecs: ["Reflective aluminium", "Fully custom", "Post & fixings"],
+    specs: [
+      { label: "Substrate", value: "Rust-proof aluminium" },
+      { label: "Sheeting", value: "Reflective (EG / HI)" },
+      { label: "Sizes", value: "Made to order" },
+      { label: "Colours", value: "Blue, green & custom" },
+      { label: "Mounting", value: "Galvanized posts & clamps" },
+      { label: "Legend", value: "Custom text, arrows & symbols" },
+    ],
+    features: [
+      "Custom legends, arrows and symbols",
+      "Reflective faces for night visibility",
+      "Corrosion-proof aluminium panels",
+      "Complete post and fixing kits",
+    ],
+    applications: [
+      "Highway & municipal guide signs",
+      "Car parks & multi-storey wayfinding",
+      "Industrial & campus navigation",
+      "Retail and facility directories",
+    ],
+  },
+  {
     slug: "road-marking-paint",
     name: "Road Marking Paint",
     category: "Road Marking",
@@ -240,6 +272,38 @@ export const PRODUCTS: Product[] = [
       "Car parks & loading bays",
       "Pedestrian crossings & symbols",
       "Warehouse floor demarcation",
+    ],
+  },
+  {
+    slug: "thermoplastic-marking-materials",
+    name: "Thermoplastic Marking Materials",
+    category: "Road Marking",
+    image: "/images/thermoplastic-marking.webp",
+    tagline: "Melt. Mark. Last.",
+    description:
+      "Hot-applied thermoplastic compound and glass beads for durable lines.",
+    longDescription:
+      "NEXBOND Thermoplastic Marking Materials fuse to the road surface for lines that outlast paint. Supplied as pre-mixed hot-applied compound with drop-on glass beads for retro-reflectivity, they deliver bright, hard-wearing markings that stand up to heavy traffic and harsh sun.",
+    cardSpecs: ["Hot-applied compound", "Drop-on glass beads", "Long service life"],
+    specs: [
+      { label: "Type", value: "Hot-applied thermoplastic" },
+      { label: "Colours", value: "White, yellow & custom" },
+      { label: "Reflectivity", value: "Drop-on glass beads" },
+      { label: "Form", value: "Granular / pellet" },
+      { label: "Coverage", value: "High yield per kg" },
+      { label: "Durability", value: "Abrasion & UV resistant" },
+    ],
+    features: [
+      "Fuses to asphalt for a lasting bond",
+      "Retro-reflective glass-bead finish",
+      "Bright, high-opacity colour",
+      "Withstands heavy traffic and heat",
+    ],
+    applications: [
+      "Highway lane & edge lines",
+      "Zebra crossings & symbols",
+      "Car park & bay marking",
+      "Warehouse floor lines",
     ],
   },
   {
@@ -276,6 +340,38 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
+    slug: "speed-bumps-wheel-stops",
+    name: "Speed Bumps & Wheel Stops",
+    category: "Road Safety",
+    image: "/images/speed-bumps.webp",
+    tagline: "Slow It Down",
+    description:
+      "Heavy-duty rubber speed bumps and wheel stops for traffic calming.",
+    longDescription:
+      "NEXBOND Speed Bumps and wheel stops calm traffic and protect people and property. Moulded from tough recycled rubber with high-visibility yellow inserts and reflective panels, the modular sections bolt straight to asphalt or concrete and shrug off constant vehicle loads.",
+    cardSpecs: ["Recycled rubber", "Reflective inserts", "Modular bolt-down"],
+    specs: [
+      { label: "Products", value: "Speed bumps & wheel stops" },
+      { label: "Material", value: "Heavy-duty recycled rubber" },
+      { label: "Colour", value: "Black with yellow inserts" },
+      { label: "Reflectivity", value: "Reflective panels" },
+      { label: "Install", value: "Bolt-down, modular" },
+      { label: "Load", value: "Heavy-vehicle rated" },
+    ],
+    features: [
+      "Tough recycled-rubber construction",
+      "High-visibility yellow & reflective inserts",
+      "Modular sections for any width",
+      "Simple bolt-down installation",
+    ],
+    applications: [
+      "Car parks & access roads",
+      "Residential & community streets",
+      "Loading yards & depots",
+      "School & pedestrian zones",
+    ],
+  },
+  {
     slug: "infrastructure-hardware",
     name: "Infrastructure Hardware",
     category: "Infrastructure",
@@ -306,6 +402,38 @@ export const PRODUCTS: Product[] = [
       "Structural steel connections",
       "Road & bridge furniture",
       "General heavy construction",
+    ],
+  },
+  {
+    slug: "guardrails-crash-barriers",
+    name: "Guardrails & Crash Barriers",
+    category: "Infrastructure",
+    image: "/images/guardrails.webp",
+    tagline: "Hold the Line",
+    description:
+      "Galvanized W-beam guardrail and crash barrier systems.",
+    longDescription:
+      "NEXBOND Guardrails & Crash Barriers absorb and redirect impacts to keep roads safe. Hot-dip galvanized W-beam rails, posts and fittings meet highway standards and resist corrosion for decades — supplied as complete systems ready to install on roads, bridges and job sites.",
+    cardSpecs: ["Hot-dip galvanized", "W-beam profile", "Complete system"],
+    specs: [
+      { label: "Range", value: "Rails, posts & fittings" },
+      { label: "Profile", value: "W-beam (corrugated)" },
+      { label: "Material", value: "Hot-dip galvanized steel" },
+      { label: "Standards", value: "Highway crash-barrier specs" },
+      { label: "Finish", value: "Corrosion resistant" },
+      { label: "Supply", value: "Complete systems" },
+    ],
+    features: [
+      "Absorbs and redirects vehicle impact",
+      "Hot-dip galvanized for decades of service",
+      "Standards-compliant W-beam profile",
+      "Complete rail, post and fixing kits",
+    ],
+    applications: [
+      "Highways & bridge edges",
+      "Roadside & median barriers",
+      "Car parks & loading docks",
+      "Industrial site perimeters",
     ],
   },
 ];

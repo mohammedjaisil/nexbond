@@ -8,7 +8,7 @@ export function ProductCard({ p }: { p: Product }) {
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/8 bg-coal transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/60 hover:shadow-[0_24px_60px_rgba(212,165,32,0.14)]">
       <Link
         href={`/products/${p.slug}`}
-        className="relative block aspect-[4/3] overflow-hidden bg-[#141414]"
+        className="relative block aspect-[4/5] overflow-hidden bg-[#141414]"
         aria-label={`${p.name} details`}
       >
         <Image

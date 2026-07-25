@@ -304,7 +304,7 @@ export default async function ProductPage({ params }: Props) {
                     href={`/products/${p.slug}`}
                     className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink/10 bg-cream transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-lg"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden bg-ink">
+                    <div className="relative aspect-[4/5] overflow-hidden bg-[#141414]">
                       <Image
                         src={p.image}
                         alt={p.name}

@@ -7,6 +7,7 @@ import { ArrowRightIcon } from "./icons";
 export function Products({
   heading = true,
   featured = false,
+  limit,
   label = "Our Products",
   title = "Engineered for Performance.",
   accent = "Built for Trust.",
@@ -14,11 +15,14 @@ export function Products({
   heading?: boolean;
   /** Show only featured products, with a "view all" link. */
   featured?: boolean;
+  /** Cap the number of cards shown. */
+  limit?: number;
   label?: string;
   title?: string;
   accent?: string;
 }) {
-  const items = featured ? PRODUCTS.filter((p) => p.featured) : PRODUCTS;
+  const base = featured ? PRODUCTS.filter((p) => p.featured) : PRODUCTS;
+  const items = limit ? base.slice(0, limit) : base;
 
   return (
     <section id="products" className="bg-ink py-24 sm:py-32">

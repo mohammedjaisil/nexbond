@@ -19,6 +19,7 @@ export default function Home() {
         <About />
         <Products
           featured
+          limit={3}
           label="Featured Products"
           title="Our Best-Sellers."
           accent="Ready to Ship."

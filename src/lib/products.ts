@@ -1,6 +1,7 @@
 export type Product = {
   slug: string;
   name: string;
+  category: string;
   image: string;
   tagline: string;
   description: string;
@@ -9,12 +10,14 @@ export type Product = {
   specs: { label: string; value: string }[];
   features: string[];
   applications: string[];
+  featured?: boolean;
 };
 
 export const PRODUCTS: Product[] = [
   {
     slug: "general-purpose-masking-tape",
     name: "General Purpose Masking Tape",
+    category: "Masking Tape",
     image: "/images/tape-general.png",
     tagline: "Reliable Everyday Performance",
     description:
@@ -46,8 +49,10 @@ export const PRODUCTS: Product[] = [
   {
     slug: "premium-masking-tape",
     name: "Premium Masking Tape",
+    category: "Masking Tape",
     image: "/images/tape-premium.png",
     tagline: "Professional-Grade Finish",
+    featured: true,
     description:
       "Professional-grade crepe paper tape for demanding finishes.",
     longDescription:
@@ -77,6 +82,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: "heavy-duty-masking-tape",
     name: "Heavy Duty Masking Tape",
+    category: "Masking Tape",
     image: "/images/tape-heavy-duty.png",
     tagline: "Built for Tough Conditions",
     description:
@@ -105,8 +111,249 @@ export const PRODUCTS: Product[] = [
       "Outdoor surface masking",
     ],
   },
+  {
+    slug: "high-visibility-safety-gear",
+    name: "High-Visibility Safety Gear",
+    category: "Safety",
+    image: "/images/safety-gear.webp",
+    tagline: "See and Be Seen",
+    featured: true,
+    description:
+      "Hi-vis vests, cones and hard hats that keep crews visible on site.",
+    longDescription:
+      "NEXBOND High-Visibility Safety Gear keeps your crew seen in every condition. From reflective vests to impact-rated hard hats and weighted traffic cones, each item is built to endure UAE heat, dust and long shifts — so on-site safety is never an afterthought.",
+    cardSpecs: ["EN ISO 20471 reflective", "UV & heat resistant", "Bulk supply"],
+    specs: [
+      { label: "Range", value: "Vests, cones & hard hats" },
+      { label: "Reflectivity", value: "EN ISO 20471 Class 2/3" },
+      { label: "Material", value: "Breathable polyester / ABS" },
+      { label: "Colours", value: "Fluorescent orange & yellow" },
+      { label: "Temperature", value: "Rated for harsh site heat" },
+      { label: "Supply", value: "Single units or bulk cartons" },
+    ],
+    features: [
+      "High-contrast fabric with reflective tape",
+      "Lightweight and breathable for long shifts",
+      "Impact-resistant hard hats",
+      "Stackable, weighted-base traffic cones",
+    ],
+    applications: [
+      "Road works & traffic management",
+      "Construction & industrial sites",
+      "Warehousing & logistics",
+      "Events & crowd safety",
+    ],
+  },
+  {
+    slug: "traffic-safety-cones",
+    name: "Traffic Safety Cones",
+    category: "Safety",
+    image: "/images/safety-cones.webp",
+    tagline: "Mark It. Guard It.",
+    description:
+      "Weighted, high-visibility traffic cones for lane control and work zones.",
+    longDescription:
+      "NEXBOND Traffic Safety Cones bring instant, high-visibility control to any work zone. Moulded from tough, UV-stable PVC in fluorescent orange with a reflective collar, each cone has a weighted base that stays put in wind and wash — and stacks flat for easy transport and storage.",
+    cardSpecs: ["Fluorescent PVC", "Reflective collar", "Weighted base"],
+    specs: [
+      { label: "Heights", value: "300 / 500 / 750mm" },
+      { label: "Material", value: "UV-stable PVC" },
+      { label: "Colour", value: "Fluorescent orange" },
+      { label: "Reflectivity", value: "Reflective sleeve collar" },
+      { label: "Base", value: "Weighted, non-tip" },
+      { label: "Storage", value: "Stackable" },
+    ],
+    features: [
+      "Bright fluorescent, high-visibility finish",
+      "Reflective collar for night use",
+      "Weighted base resists wind and wash",
+      "Stacks flat for transport and storage",
+    ],
+    applications: [
+      "Lane closures & traffic control",
+      "Work zones & car parks",
+      "Events & crowd channelling",
+      "Hazard and spill marking",
+    ],
+  },
+  {
+    slug: "reflective-traffic-signs",
+    name: "Reflective Traffic Signs",
+    category: "Signage",
+    image: "/images/traffic-signs.webp",
+    tagline: "Clear at Every Distance",
+    featured: true,
+    description:
+      "High-intensity reflective road and warning signage, built to standard.",
+    longDescription:
+      "NEXBOND Reflective Traffic Signs are manufactured on rust-proof aluminium with high-intensity prismatic sheeting, staying legible day and night. Supplied blank or custom-printed to GCC standards and mounted on galvanized posts for a long service life in demanding outdoor conditions.",
+    cardSpecs: ["Aluminium substrate", "High-intensity prismatic", "Custom printed"],
+    specs: [
+      { label: "Substrate", value: "Rust-proof aluminium" },
+      { label: "Sheeting", value: "High-intensity prismatic" },
+      { label: "Sizes", value: "600 / 750 / 900mm & custom" },
+      { label: "Mounting", value: "Galvanized posts & clamps" },
+      { label: "Compliance", value: "GCC / MUTCD layouts" },
+      { label: "Finish", value: "Weather & UV resistant" },
+    ],
+    features: [
+      "Retro-reflective for night visibility",
+      "Corrosion-proof aluminium panels",
+      "Custom shapes, symbols and text",
+      "Complete post & fixing kits available",
+    ],
+    applications: [
+      "Highways & municipal roads",
+      "Construction & diversion zones",
+      "Car parks & private estates",
+      "Industrial facility wayfinding",
+    ],
+  },
+  {
+    slug: "road-marking-paint",
+    name: "Road Marking Paint",
+    category: "Road Marking",
+    image: "/images/road-marking-paint.webp",
+    tagline: "Lines That Last",
+    featured: true,
+    description:
+      "Durable thermoplastic and cold-applied paints for crisp road lines.",
+    longDescription:
+      "NEXBOND Road Marking Paint delivers bright, hard-wearing lines that survive heavy traffic and relentless sun. Available as hot-applied thermoplastic and fast-drying cold paint, with optional glass-bead retro-reflectivity for lane markings that stay visible in headlights, rain and dust.",
+    cardSpecs: ["Thermoplastic & cold paint", "Glass-bead reflective", "Fast drying"],
+    specs: [
+      { label: "Types", value: "Thermoplastic & cold-applied" },
+      { label: "Colours", value: "White, yellow & custom" },
+      { label: "Reflectivity", value: "Glass-bead option" },
+      { label: "Drying", value: "Fast cure, low downtime" },
+      { label: "Coverage", value: "High yield per kg / litre" },
+      { label: "Durability", value: "Abrasion & UV resistant" },
+    ],
+    features: [
+      "Bright, high-opacity pigments",
+      "Retro-reflective glass-bead option",
+      "Strong adhesion to asphalt & concrete",
+      "Resists cracking, fading and wear",
+    ],
+    applications: [
+      "Lane & centre-line marking",
+      "Car parks & loading bays",
+      "Pedestrian crossings & symbols",
+      "Warehouse floor demarcation",
+    ],
+  },
+  {
+    slug: "reflective-road-studs",
+    name: "Reflective Road Studs & Delineators",
+    category: "Road Safety",
+    image: "/images/road-studs.webp",
+    tagline: "Guiding Every Lane",
+    featured: true,
+    description:
+      "Reflective road studs and flexible delineators for safe guidance.",
+    longDescription:
+      "NEXBOND road studs and delineator posts guide traffic through lanes, bends and work zones — day or night. Built with impact-resistant housings and high-reflectivity lenses (with solar-LED options), they rebound from vehicle strikes and keep drivers on line in low light and poor weather.",
+    cardSpecs: ["Impact-resistant body", "Reflective / solar lenses", "Flexible posts"],
+    specs: [
+      { label: "Products", value: "Road studs & delineator posts" },
+      { label: "Body", value: "Aluminium / polycarbonate" },
+      { label: "Lenses", value: "Reflective, solar-LED option" },
+      { label: "Colours", value: "White, red & amber" },
+      { label: "Load", value: "Heavy-vehicle resistant" },
+      { label: "Fixing", value: "Adhesive or bolt-down" },
+    ],
+    features: [
+      "High-visibility reflective lenses",
+      "Solar-powered LED versions available",
+      "Rebounding flexible delineator posts",
+      "Withstands repeated vehicle impact",
+    ],
+    applications: [
+      "Lane dividers & road edges",
+      "Roundabouts & sharp bends",
+      "Work-zone channelling",
+      "Car park & access-road guidance",
+    ],
+  },
+  {
+    slug: "infrastructure-hardware",
+    name: "Infrastructure Hardware",
+    category: "Infrastructure",
+    image: "/images/infrastructure-hardware.webp",
+    tagline: "Built to Hold",
+    featured: true,
+    description:
+      "Heavy-duty galvanized brackets, bolts and structural fixings.",
+    longDescription:
+      "NEXBOND Infrastructure Hardware covers the structural essentials — hot-dip galvanized brackets, high-tensile bolts, guardrail fittings and fixings engineered to hold under load and weather. Every component is corrosion-protected for a long, maintenance-free service life on roads and job sites.",
+    cardSpecs: ["Hot-dip galvanized", "High-tensile grade", "Corrosion resistant"],
+    specs: [
+      { label: "Range", value: "Brackets, bolts & fittings" },
+      { label: "Material", value: "Galvanized & stainless steel" },
+      { label: "Grade", value: "High-tensile (8.8 / 10.9)" },
+      { label: "Finish", value: "Hot-dip galvanized" },
+      { label: "Standards", value: "ISO metric threads" },
+      { label: "Supply", value: "Boxed or bulk" },
+    ],
+    features: [
+      "Hot-dip galvanized corrosion protection",
+      "High-tensile load ratings",
+      "Precision ISO-standard threads",
+      "Guardrail and structural fittings",
+    ],
+    applications: [
+      "Guardrail & barrier assembly",
+      "Structural steel connections",
+      "Road & bridge furniture",
+      "General heavy construction",
+    ],
+  },
 ];
 
 export function getProduct(slug: string): Product | undefined {
   return PRODUCTS.find((p) => p.slug === slug);
+}
+
+/** URL-safe anchor id for a category, e.g. "Road Marking" -> "road-marking". */
+export function catId(category: string): string {
+  return category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+export type Category = {
+  id: string;
+  name: string;
+  image: string;
+  blurb: string;
+  count: number;
+};
+
+/** Categories in first-seen order, with a representative image + product count. */
+export function getCategories(): Category[] {
+  const blurbs: Record<string, string> = {
+    "Masking Tape": "Crepe-paper tapes with guaranteed true size.",
+    Safety: "Hi-vis gear, cones and barriers for every site.",
+    Signage: "Reflective road, warning and directional signs.",
+    "Road Marking": "Paints and materials for lines that last.",
+    "Road Safety": "Studs, delineators and traffic-calming gear.",
+    Infrastructure: "Heavy-duty structural hardware and fixings.",
+  };
+  const order: string[] = [];
+  const byCat = new Map<string, Product[]>();
+  for (const p of PRODUCTS) {
+    if (!byCat.has(p.category)) {
+      byCat.set(p.category, []);
+      order.push(p.category);
+    }
+    byCat.get(p.category)!.push(p);
+  }
+  return order.map((name) => {
+    const items = byCat.get(name)!;
+    return {
+      id: catId(name),
+      name,
+      image: items[0].image,
+      blurb: blurbs[name] ?? "",
+      count: items.length,
+    };
+  });
 }

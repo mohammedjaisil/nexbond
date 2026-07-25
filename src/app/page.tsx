@@ -3,9 +3,9 @@ import { Hero } from "@/components/Hero";
 import { PromiseBar } from "@/components/PromiseBar";
 import { About } from "@/components/About";
 import { Products } from "@/components/Products";
+import { Categories } from "@/components/Categories";
 import { WhyNexbond } from "@/components/WhyNexbond";
 import { Features } from "@/components/Features";
-import { ComingSoon } from "@/components/ComingSoon";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -17,10 +17,15 @@ export default function Home() {
         <Hero />
         <PromiseBar />
         <About />
-        <Products />
+        <Products
+          featured
+          label="Featured Products"
+          title="Our Best-Sellers."
+          accent="Ready to Ship."
+        />
         <WhyNexbond />
         <Features />
-        <ComingSoon />
+        <Categories />
         <Contact />
       </main>
       <Footer />

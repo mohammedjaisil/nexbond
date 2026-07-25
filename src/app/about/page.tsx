@@ -3,7 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { PageHero } from "@/components/PageHero";
 import { About } from "@/components/About";
 import { Features } from "@/components/Features";
-import { ComingSoon } from "@/components/ComingSoon";
+import { Team } from "@/components/Team";
 import { CtaStrip } from "@/components/CtaStrip";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
@@ -69,7 +69,7 @@ export default function AboutPage() {
           </div>
         </section>
         <Features />
-        <ComingSoon />
+        <Team />
         <CtaStrip />
       </main>
       <Footer />

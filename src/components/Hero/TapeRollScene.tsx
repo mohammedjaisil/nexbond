@@ -199,7 +199,9 @@ export default function TapeRollScene({
     <Canvas
       // Stop the render loop entirely while the hero is off-screen
       frameloop={paused ? "never" : "always"}
-      dpr={[1, 2]}
+      // Cap at 1.5x — a small canvas at full 2x retina costs ~1.8x the
+      // fragment work for no visible gain and is a common source of GPU jank.
+      dpr={[1, 1.5]}
       camera={{ fov: 45, near: 0.1, far: 100, position: [0, -0.3, 7.6] }}
       gl={{ antialias: true, alpha: true }}
       tabIndex={-1}

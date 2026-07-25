@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { PageHero } from "@/components/PageHero";
-import { Products } from "@/components/Products";
+import { Catalog } from "@/components/Catalog";
 import { PromiseBar } from "@/components/PromiseBar";
-import { ComingSoon } from "@/components/ComingSoon";
 import { CtaStrip } from "@/components/CtaStrip";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Products — NEXBOND Masking Tapes | True Size Guaranteed",
+  title: "Products — NEXBOND | Tapes, Safety, Signage & Infrastructure",
   description:
-    "NEXBOND masking tapes: General Purpose, Premium and Heavy Duty. Full 36 yards length, full 50mm width — guaranteed true size on every roll.",
+    "The complete NEXBOND range: masking tapes, high-visibility safety gear, reflective traffic signs, road marking paint, road studs and infrastructure hardware — request a quote on any product.",
 };
 
 export default function ProductsPage() {
@@ -22,12 +21,11 @@ export default function ProductsPage() {
           label="Our Products"
           title="Engineered for Performance."
           accent="Built for Trust."
-          subtitle="Every NEXBOND roll delivers the full printed size — full length, full width, no compromise. Explore the range."
+          subtitle="From masking tapes to safety, signage and infrastructure — a complete range, every item held to the same honest standard. Explore the full catalogue."
           watermark="PRODUCTS"
         />
-        <Products heading={false} />
+        <Catalog />
         <PromiseBar />
-        <ComingSoon />
         <CtaStrip />
       </main>
       <Footer />

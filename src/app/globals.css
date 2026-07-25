@@ -19,6 +19,11 @@ html {
   scroll-padding-top: 5rem;
 }
 
+/* Long, media-heavy pages: keep paint work in check without content-visibility
+   (which interferes with the in-view reveal animations). The hero already
+   halts its WebGL / particle / background loops once scrolled past, and the
+   3D canvas render resolution is capped — those carry the scroll smoothness. */
+
 body {
   background: var(--color-cream);
   color: var(--color-ink);

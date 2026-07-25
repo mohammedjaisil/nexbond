@@ -1,16 +1,33 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Reveal } from "./Reveal";
 import { PhoneIcon } from "./icons";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [product, setProduct] = useState<string | null>(null);
+  const [message, setMessage] = useState("");
+
+  // Prefill the request when arriving from a product's "Get a Quote" link.
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search).get("product");
+    if (p) {
+      setProduct(p);
+      setMessage(
+        `I'd like to request a quote for: ${p}.\n\nQuantity / sizes:\nDelivery location:\n`
+      );
+    }
+  }, []);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const subject = encodeURIComponent("Quote Request — NEXBOND Website");
+    const subject = encodeURIComponent(
+      product
+        ? `Quote Request: ${product} — NEXBOND Website`
+        : "Quote Request — NEXBOND Website"
+    );
     const body = encodeURIComponent(
       `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\n\nMessage:\n${data.get("message")}`
     );
@@ -60,6 +77,12 @@ export function Contact() {
             className="rounded-2xl bg-cream p-7 shadow-2xl shadow-ink/20 sm:p-9"
           >
             <h3 className="headline text-2xl text-ink">Request a Quote</h3>
+            {product && (
+              <p className="mt-2 inline-flex items-center gap-2 rounded-full bg-ink/5 px-3 py-1 text-xs font-semibold text-ink/70">
+                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                Quote for: {product}
+              </p>
+            )}
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <label className="block">
                 <span className="sr-only">Name</span>
@@ -98,6 +121,8 @@ export function Contact() {
                   name="message"
                   required
                   rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell us about your requirements — quantities, sizes, delivery location…"
                   className={inputClass}
                 />

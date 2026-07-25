@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { PageHero } from "@/components/PageHero";
 import { Contact } from "@/components/Contact";
+import { LocationMap } from "@/components/LocationMap";
 import { Footer } from "@/components/Footer";
 import { Stagger, StaggerItem } from "@/components/Reveal";
 import { MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
@@ -68,6 +69,7 @@ export default function ContactPage() {
           </Stagger>
         </section>
         <Contact />
+        <LocationMap />
       </main>
       <Footer />
     </>

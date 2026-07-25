@@ -18,7 +18,7 @@ export const PRODUCTS: Product[] = [
     slug: "general-purpose-masking-tape",
     name: "General Purpose Masking Tape",
     category: "Masking Tape",
-    image: "/images/tape-general.png",
+    image: "/images/tape-general.webp",
     tagline: "Reliable Everyday Performance",
     description:
       "Reliable everyday masking for painting, bundling and labelling.",
@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
     slug: "premium-masking-tape",
     name: "Premium Masking Tape",
     category: "Masking Tape",
-    image: "/images/tape-premium.png",
+    image: "/images/tape-premium.webp",
     tagline: "Professional-Grade Finish",
     featured: true,
     description:
@@ -83,7 +83,7 @@ export const PRODUCTS: Product[] = [
     slug: "heavy-duty-masking-tape",
     name: "Heavy Duty Masking Tape",
     category: "Masking Tape",
-    image: "/images/tape-heavy-duty.png",
+    image: "/images/tape-heavy-duty.webp",
     tagline: "Built for Tough Conditions",
     description:
       "Built for tough industrial surfaces and harsh site conditions.",

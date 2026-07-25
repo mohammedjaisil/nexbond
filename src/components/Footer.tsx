@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { PRODUCTS } from "@/lib/products";
+import { getCategories } from "@/lib/products";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -67,22 +67,22 @@ export function Footer() {
           </ul>
         </nav>
 
-        <nav aria-label="Products">
-          <h3 className="headline text-lg text-white">Products</h3>
+        <nav aria-label="Categories">
+          <h3 className="headline text-lg text-white">Categories</h3>
           <ul className="mt-5 space-y-3 text-sm">
-            {PRODUCTS.map((p) => (
-              <li key={p.slug}>
+            {getCategories().map((c) => (
+              <li key={c.id}>
                 <Link
-                  href={`/products/${p.slug}`}
+                  href={`/products#${c.id}`}
                   className="transition-colors hover:text-gold"
                 >
-                  {p.name}
+                  {c.name}
                 </Link>
               </li>
             ))}
             <li>
               <Link href="/products" className="transition-colors hover:text-gold">
-                All Products &amp; Coming Soon
+                All Products
               </Link>
             </li>
           </ul>

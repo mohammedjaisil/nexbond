@@ -189,7 +189,7 @@ export function Hero() {
             )}
             {(caps === "low" || reduced) && (
               <Image
-                src="/images/tape-heavy-duty.png"
+                src="/images/tape-heavy-duty.webp"
                 alt="NEXBOND premium masking tape roll — industrial grade, guaranteed true size"
                 width={800}
                 height={1132}

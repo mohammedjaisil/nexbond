@@ -37,9 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${product.name} — NEXBOND | Request a Quote`,
     description: product.longDescription,
+    alternates: { canonical: `/products/${product.slug}` },
     openGraph: {
       title: `${product.name} — NEXBOND`,
       description: product.description,
+      url: `/products/${product.slug}`,
       images: [{ url: product.image }],
     },
   };
@@ -51,6 +53,23 @@ export default async function ProductPage({ params }: Props) {
   if (!product) notFound();
 
   const related = PRODUCTS.filter((p) => p.slug !== slug).slice(0, 3);
+
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    image: `https://nexbondinfra.com${product.image}`,
+    category: product.category,
+    brand: { "@type": "Brand", name: "NEXBOND" },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "AED",
+      url: `https://nexbondinfra.com/products/${product.slug}`,
+      seller: { "@type": "Organization", name: "NEXBOND Industrial Solutions LLC" },
+    },
+  };
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}`;
   const waHref = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
     `Hi NEXBOND, I'd like a quote for the ${product.name}. Please share pricing and availability.`
@@ -58,6 +77,10 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }}
+      />
       <Navbar />
       <main>
         {/* ---------- PDP top: gallery + buy box ---------- */}
@@ -169,7 +192,7 @@ export default async function ProductPage({ params }: Props) {
                         href={waHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 text-sm font-bold uppercase tracking-wider text-[#062e15] transition-transform hover:scale-[1.02]"
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 text-sm font-bold uppercase tracking-wider text-white transition-transform hover:scale-[1.02]"
                       >
                         <WhatsAppIcon className="h-5 w-5" />
                         WhatsApp

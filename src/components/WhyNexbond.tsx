@@ -65,7 +65,7 @@ export function WhyNexbond() {
         <Reveal className="order-1 lg:order-2">
           <div className="group overflow-hidden rounded-2xl">
             <Image
-              src="/images/why-measure.png"
+              src="/images/why-measure.webp"
               alt="NEXBOND masking tape roll measured with a measuring tape — true size guaranteed"
               width={1400}
               height={1980}

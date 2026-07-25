@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Guaranteed true size masking tape from NEXBOND Industrial Solutions LLC, Sharjah UAE. Full length. Full width. No compromise.",
     url: "https://nexbondinfra.com",
     siteName: "NEXBOND",
-    images: [{ url: "/images/hero-tape.png", width: 1600, height: 2263 }],
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_AE",
     type: "website",
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "NEXBOND — Premium Masking Tape | True Size. True Trust.",
     description:
       "Guaranteed true size masking tape. Full 36 yards. Full 50mm. What we promise, we deliver.",
-    images: ["/images/hero-tape.png"],
+    images: ["/images/og-image.jpg"],
   },
   robots: { index: true, follow: true },
 };

@@ -17,7 +17,7 @@ export function About() {
         <Reveal className="relative">
           <div className="group overflow-hidden rounded-2xl">
             <Image
-              src="/images/about-rolls.png"
+              src="/images/about-rolls.webp"
               alt="NEXBOND masking tape rolls on a clean surface"
               width={1400}
               height={1980}

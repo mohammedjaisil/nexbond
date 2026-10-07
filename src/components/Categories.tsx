@@ -62,7 +62,7 @@ export function Categories() {
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 17vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.07]"
                   />
-                  <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-ink/80 px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+                  <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-ink/80 px-3 py-2 text-[0.65rem] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
                     {c.count} {c.count === 1 ? "Item" : "Items"}
                     <ArrowRightIcon className="h-3.5 w-3.5 text-gold transition-transform group-hover:translate-x-1" />
                   </span>

@@ -25,7 +25,7 @@ const TEAM: Member[] = [
   {
     name: "Sara Khan",
     role: "Quality Lead",
-    bio: "Checks every batch against the label — full length, full width, no compromise.",
+    bio: "Checks every batch against its spec sheet — tape, signage or hardware. No compromise.",
   },
 ];
 

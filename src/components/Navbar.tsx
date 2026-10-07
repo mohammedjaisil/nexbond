@@ -56,7 +56,7 @@ export function Navbar() {
   }, [pathname]);
 
   // GET form → /products?q=… so search works without JS too.
-  const searchField = (autoId: string) => (
+  const searchField = (autoId: string, placeholder = "Search products…") => (
     <form action="/products" role="search" className="relative w-full">
       <label htmlFor={autoId} className="sr-only">
         Search products
@@ -67,7 +67,7 @@ export function Navbar() {
         name="q"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search tapes, signage, safety gear, hardware…"
+        placeholder={placeholder}
         className="w-full rounded-full border border-white/15 bg-white/[0.06] py-2.5 pl-11 pr-4 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-gold/70 focus:bg-white/10"
       />
       <button
@@ -95,7 +95,7 @@ export function Navbar() {
           <div className="flex items-center gap-5">
             <a
               href={`tel:${PHONE}`}
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-gold"
+              className="inline-flex items-center gap-1.5 py-1 transition-colors hover:text-gold"
             >
               <PhoneIcon className="h-3.5 w-3.5" />
               {PHONE}
@@ -104,14 +104,14 @@ export function Navbar() {
               href={`https://wa.me/${WHATSAPP}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-gold"
+              className="inline-flex items-center gap-1.5 py-1 transition-colors hover:text-gold"
             >
               <WhatsAppIcon className="h-3.5 w-3.5" />
               WhatsApp
             </a>
             <a
               href="mailto:info@nexbondinfra.com"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-gold"
+              className="inline-flex items-center gap-1.5 py-1 transition-colors hover:text-gold"
             >
               <MailIcon className="h-3.5 w-3.5" />
               info@nexbondinfra.com
@@ -122,11 +122,16 @@ export function Navbar() {
 
       {/* ---------- Main bar: logo · search · actions ---------- */}
       <div className="mx-auto flex h-20 max-w-7xl items-center gap-6 px-5 sm:px-8">
-        <Link href="/" aria-label="NEXBOND — home" className="shrink-0 text-white">
+        <Link href="/" aria-label="NEXBOND — home" className="shrink-0 py-2 text-white">
           <Logo />
         </Link>
 
-        <div className="hidden flex-1 md:block">{searchField("site-search")}</div>
+        <div className="hidden flex-1 md:block">
+          {searchField(
+            "site-search",
+            "Search tapes, signage, safety gear, road marking, hardware…"
+          )}
+        </div>
 
         <div className="ml-auto flex items-center gap-2 md:ml-0">
           <Link

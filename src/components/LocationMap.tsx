@@ -28,7 +28,7 @@ export function LocationMap() {
             href={DIRECTIONS}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex shrink-0 items-center gap-2 text-sm font-bold uppercase tracking-wider text-gold"
+            className="group inline-flex shrink-0 items-center gap-2 py-2 text-sm font-bold uppercase tracking-wider text-gold"
           >
             Get Directions
             <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />

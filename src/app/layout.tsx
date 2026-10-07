@@ -17,21 +17,28 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexbondinfra.com"),
-  title: "NEXBOND — Premium Masking Tape | Strength in Every Bond",
+  title:
+    "NEXBOND — Industrial, Safety & Infrastructure Supplies | Sharjah, UAE",
   description:
-    "NEXBOND Industrial Solutions LLC, Sharjah UAE. Premium masking tape with guaranteed true size — full 36 yards length, full 50mm width. Industrial, safety & infrastructure solutions. What we promise, we deliver.",
+    "NEXBOND Industrial Solutions LLC, Sharjah UAE. Masking tapes, hi-vis safety gear, reflective traffic signage, road marking materials, traffic calming and infrastructure hardware — supplied in bulk across the UAE from Sharjah. What the label says is what you get.",
   keywords: [
+    "industrial supplies UAE",
+    "safety equipment Sharjah",
+    "reflective traffic signs UAE",
+    "road marking paint UAE",
+    "thermoplastic road marking",
+    "road studs and delineators UAE",
+    "speed bumps UAE",
+    "guardrail and crash barriers UAE",
+    "galvanized infrastructure hardware",
+    "hi-vis safety gear Sharjah",
     "masking tape UAE",
-    "industrial tape Sharjah",
-    "premium masking tape",
     "NEXBOND",
-    "road safety solutions UAE",
-    "industrial adhesives",
   ],
   openGraph: {
-    title: "NEXBOND — Premium Masking Tape | True Size. True Trust.",
+    title: "NEXBOND — Industrial, Safety & Infrastructure Supplies",
     description:
-      "Guaranteed true size masking tape from NEXBOND Industrial Solutions LLC, Sharjah UAE. Full length. Full width. No compromise.",
+      "Six ranges from one UAE supplier: masking tape, safety gear, signage, road marking, traffic calming and infrastructure hardware. True to spec, every order.",
     url: "https://nexbondinfra.com",
     siteName: "NEXBOND",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
@@ -40,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEXBOND — Premium Masking Tape | True Size. True Trust.",
+    title: "NEXBOND — Industrial, Safety & Infrastructure Supplies",
     description:
-      "Guaranteed true size masking tape. Full 36 yards. Full 50mm. What we promise, we deliver.",
+      "Tapes, safety gear, signage, road marking, traffic calming and infrastructure hardware — supplied in bulk across the UAE.",
     images: ["/images/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -53,7 +60,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "NEXBOND Industrial Solutions LLC",
   description:
-    "Industrial tapes, safety products and infrastructure solutions. Premium masking tape with guaranteed true size.",
+    "Supplier of industrial tapes, high-visibility safety gear, reflective traffic signage, road marking materials, traffic calming products and infrastructure hardware in Sharjah, UAE.",
   url: "https://nexbondinfra.com",
   email: "info@nexbondinfra.com",
   address: {

@@ -251,7 +251,7 @@ export function HeroSlider() {
         </button>
 
         {/* ---------- Dots ---------- */}
-        <div className="absolute inset-x-0 bottom-7 z-10 flex justify-center gap-2.5">
+        <div className="absolute inset-x-0 bottom-3 z-10 flex justify-center gap-1">
           {SLIDES.map((s, i) => (
             <button
               key={s.id}
@@ -259,10 +259,17 @@ export function HeroSlider() {
               onClick={() => go(i)}
               aria-label={`Show ${s.eyebrow} slide`}
               aria-current={i === index}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === index ? "w-9 bg-gold" : "w-4 bg-white/30 hover:bg-white/60"
-              }`}
-            />
+              className="group/dot px-1.5 py-4"
+            >
+              <span
+                aria-hidden
+                className={`block h-1.5 rounded-full transition-all duration-300 ${
+                  i === index
+                    ? "w-9 bg-gold"
+                    : "w-4 bg-white/30 group-hover/dot:bg-white/60"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
@@ -277,7 +284,7 @@ export function HeroSlider() {
             <Link
               key={c.id}
               href={`/products#${c.id}`}
-              className="shrink-0 whitespace-nowrap rounded-full border border-white/12 px-4 py-2 text-xs font-semibold text-white/70 transition-colors hover:border-gold/60 hover:text-gold"
+              className="shrink-0 whitespace-nowrap rounded-full border border-white/12 px-4 py-2.5 text-xs font-semibold text-white/70 transition-colors hover:border-gold/60 hover:text-gold"
             >
               {c.name}
               <span className="ml-1.5 text-white/35">{c.count}</span>

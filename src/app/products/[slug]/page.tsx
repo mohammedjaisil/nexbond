@@ -90,11 +90,14 @@ export default async function ProductPage({ params }: Props) {
               aria-label="Breadcrumb"
               className="text-xs uppercase tracking-wider text-white/40"
             >
-              <Link href="/" className="transition-colors hover:text-gold">
+              <Link href="/" className="-my-1 inline-block py-1 transition-colors hover:text-gold">
                 Home
               </Link>{" "}
               /{" "}
-              <Link href="/products" className="transition-colors hover:text-gold">
+              <Link
+                href="/products"
+                className="-my-1 inline-block py-1 transition-colors hover:text-gold"
+              >
                 Products
               </Link>{" "}
               / <span className="text-white/70">{product.name}</span>
@@ -114,8 +117,11 @@ export default async function ProductPage({ params }: Props) {
                       className="object-cover"
                     />
                   </div>
-                  <span className="absolute right-8 top-8 rounded-full bg-gold/95 px-3 py-1 text-[0.6rem] font-bold uppercase tracking-wider text-ink shadow-lg">
-                    ✓ True Size Guaranteed
+                  <span className="absolute right-8 top-8 rounded-full bg-gold/95 px-3 py-1.5 text-[0.7rem] font-bold uppercase tracking-wider text-ink shadow-lg">
+                    ✓{" "}
+                    {product.category === "Masking Tape"
+                      ? "True Size Guaranteed"
+                      : "True to Spec"}
                   </span>
                 </div>
 
@@ -123,10 +129,10 @@ export default async function ProductPage({ params }: Props) {
                   {TRUST.map((t) => (
                     <div
                       key={t.label}
-                      className="flex items-center justify-center gap-2 rounded-xl border border-white/8 bg-coal/60 px-3 py-3 text-center"
+                      className="flex flex-col items-center justify-center gap-1.5 rounded-xl border border-white/8 bg-coal/60 px-2 py-3 text-center sm:flex-row sm:gap-2 sm:px-3"
                     >
                       <t.icon className="h-4 w-4 shrink-0 text-gold" />
-                      <span className="text-[0.7rem] font-semibold uppercase tracking-wider text-white/70">
+                      <span className="text-[0.7rem] font-semibold uppercase leading-tight tracking-wider text-white/70">
                         {t.label}
                       </span>
                     </div>
@@ -138,7 +144,7 @@ export default async function ProductPage({ params }: Props) {
               <div>
                 <Reveal>
                   <div className="flex items-center gap-3">
-                    <span className="rounded-full border border-gold/40 px-3 py-1 text-[0.6rem] font-bold uppercase tracking-wider text-gold">
+                    <span className="rounded-full border border-gold/40 px-3 py-1.5 text-[0.7rem] font-bold uppercase tracking-wider text-gold">
                       {product.category}
                     </span>
                     <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-semibold uppercase tracking-wider text-emerald-400">
@@ -162,7 +168,7 @@ export default async function ProductPage({ params }: Props) {
                         key={s.label}
                         className="rounded-xl border border-white/8 bg-coal/60 px-4 py-3"
                       >
-                        <p className="text-[0.6rem] font-bold uppercase tracking-wider text-white/40">
+                        <p className="text-[0.7rem] font-bold uppercase tracking-wider text-white/45">
                           {s.label}
                         </p>
                         <p className="mt-1 text-sm font-medium leading-snug text-white">
@@ -200,7 +206,7 @@ export default async function ProductPage({ params }: Props) {
                     </div>
                     <a
                       href={`tel:${PHONE}`}
-                      className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition-colors hover:text-gold"
+                      className="mt-2 inline-flex items-center gap-2 py-1.5 text-sm font-semibold text-white/70 transition-colors hover:text-gold"
                     >
                       <PhoneIcon className="h-4 w-4" />
                       Or call {PHONE}
@@ -238,7 +244,7 @@ export default async function ProductPage({ params }: Props) {
                 {product.specs.map((s, i) => (
                   <div
                     key={s.label}
-                    className={`grid grid-cols-[8rem_1fr] gap-4 px-6 py-4 sm:grid-cols-[10rem_1fr] ${
+                    className={`grid grid-cols-[6.5rem_1fr] gap-4 px-5 py-4 sm:grid-cols-[10rem_1fr] sm:px-6 ${
                       i > 0 ? "border-t border-ink/5" : ""
                     }`}
                   >
@@ -277,7 +283,7 @@ export default async function ProductPage({ params }: Props) {
                   </p>
                   <Link
                     href={quoteHref}
-                    className="group mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gold"
+                    className="group mt-5 inline-flex items-center gap-2 py-2 text-sm font-bold uppercase tracking-wider text-gold"
                   >
                     Request pricing
                     <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -312,7 +318,7 @@ export default async function ProductPage({ params }: Props) {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <span className="absolute left-3 top-3 rounded-full bg-ink/70 px-3 py-1 text-[0.6rem] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+                      <span className="absolute left-3 top-3 rounded-full bg-ink/70 px-3 py-1.5 text-[0.7rem] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
                         {p.category}
                       </span>
                     </div>

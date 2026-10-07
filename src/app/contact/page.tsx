@@ -56,7 +56,7 @@ export default function ContactPage() {
                   {href ? (
                     <a
                       href={href}
-                      className="mt-2 text-sm text-warmgrey transition-colors hover:text-gold"
+                      className="mt-1 py-1 text-sm text-warmgrey transition-colors hover:text-gold"
                     >
                       {line1}
                     </a>

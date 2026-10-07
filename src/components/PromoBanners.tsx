@@ -60,7 +60,7 @@ export function PromoBanners() {
             className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"
           />
           <div className="relative mt-auto p-7 sm:p-9">
-            <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold">
+            <p className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-gold">
               {FEATURE.eyebrow}
             </p>
             <h3 className="headline mt-3 max-w-md text-3xl text-white sm:text-4xl">
@@ -97,7 +97,7 @@ export function PromoBanners() {
               />
               <div className="relative flex w-full items-center justify-between gap-4 p-7">
                 <div>
-                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold">
+                  <p className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-gold">
                     {promo.eyebrow}
                   </p>
                   <h3 className="headline mt-2 max-w-xs text-xl text-white sm:text-2xl">

@@ -30,12 +30,12 @@ export function ProductCard({ p }: { p: Product }) {
         </Link>
 
         {badge && (
-          <span className="absolute left-2 top-2 rounded bg-gold px-2 py-0.5 text-[0.55rem] font-bold uppercase tracking-wider text-ink">
+          <span className="absolute left-2 top-2 rounded bg-gold px-2 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-ink">
             {badge}
           </span>
         )}
 
-        <span className="absolute inset-x-0 bottom-0 bg-ink/75 px-2.5 py-1 text-[0.55rem] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+        <span className="absolute inset-x-0 bottom-0 truncate bg-ink/75 px-2.5 py-1.5 text-[0.65rem] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
           {p.cardSpecs[0]}
         </span>
       </div>
@@ -45,29 +45,34 @@ export function ProductCard({ p }: { p: Product }) {
         <div className="flex items-center justify-between gap-2">
           <Link
             href={`/products#${catId(p.category)}`}
-            className="truncate text-[0.55rem] font-bold uppercase tracking-[0.15em] text-warmgrey transition-colors hover:text-gold"
+            className="-my-1 truncate py-1 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-warmgrey transition-colors hover:text-gold"
           >
             {p.category}
           </Link>
           <span
-            className={`inline-flex shrink-0 items-center gap-1 text-[0.55rem] font-bold uppercase tracking-wider ${
+            className={`inline-flex shrink-0 items-center gap-1 text-[0.65rem] font-bold uppercase tracking-wider ${
               inStock ? "text-emerald-600" : "text-ink/40"
             }`}
           >
             <span
-              className={`h-1 w-1 rounded-full ${inStock ? "bg-emerald-500" : "bg-ink/30"}`}
+              aria-hidden
+              className={`h-1.5 w-1.5 rounded-full ${
+                inStock ? "bg-emerald-500" : "bg-ink/30"
+              }`}
             />
-            {inStock ? "In Stock" : "On Order"}
+            <span className="sr-only min-[360px]:not-sr-only">
+              {inStock ? "In Stock" : "On Order"}
+            </span>
           </span>
         </div>
 
-        <h3 className="headline mt-1.5 text-sm leading-tight text-ink">
-          <Link href={href} className="line-clamp-2 transition-colors hover:text-gold">
+        <h3 className="headline mt-2 text-[0.95rem] leading-tight text-ink">
+          <Link href={href} className="line-clamp-2 py-1 transition-colors hover:text-gold">
             {p.name}
           </Link>
         </h3>
 
-        <p className="mt-1 line-clamp-2 text-[0.7rem] leading-relaxed text-warmgrey">
+        <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-warmgrey">
           {p.description}
         </p>
 
@@ -85,26 +90,28 @@ export function ProductCard({ p }: { p: Product }) {
               </span>
             )}
           </p>
-          <p className="mt-0.5 text-[0.55rem] uppercase tracking-wider text-warmgrey">
+          <p className="mt-1 text-[0.65rem] uppercase tracking-wider text-warmgrey">
             {price.unit ?? p.unit ?? (p.moq ? `MOQ ${p.moq}` : "Bulk pricing")}
           </p>
 
           <div className="mt-2.5 flex gap-1.5">
             <Link
               href={quoteHref}
-              className="btn-sweep inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-ink px-2 py-2.5 text-[0.55rem] font-bold uppercase tracking-wide text-white [--sweep-color:var(--color-gold)] hover:text-ink sm:text-[0.6rem]"
+              className="btn-sweep inline-flex min-w-0 flex-1 items-center justify-center gap-1.5 overflow-hidden whitespace-nowrap rounded-full bg-ink px-2 py-3 text-[0.65rem] font-bold uppercase tracking-wide text-white [--sweep-color:var(--color-gold)] hover:text-ink"
             >
-              <CartIcon className="h-3.5 w-3.5" />
-              Add to Quote
+              <CartIcon className="hidden h-4 w-4 shrink-0 min-[360px]:block" />
+              {/* Short label keeps the button on one line in the 2-up phone grid */}
+              <span className="lg:hidden">Quote</span>
+              <span className="hidden lg:inline">Add to Quote</span>
             </Link>
             <a
               href={waHref}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Ask about ${p.name} on WhatsApp`}
-              className="inline-flex shrink-0 items-center justify-center rounded-full border border-ink/12 px-2.5 text-ink/55 transition-colors hover:border-[#25D366] hover:bg-[#25D366] hover:text-white"
+              className="inline-flex w-9 shrink-0 items-center justify-center rounded-full border border-ink/12 text-ink/55 transition-colors hover:border-[#25D366] hover:bg-[#25D366] hover:text-white min-[360px]:w-11"
             >
-              <WhatsAppIcon className="h-3.5 w-3.5" />
+              <WhatsAppIcon className="h-4 w-4" />
             </a>
           </div>
         </div>

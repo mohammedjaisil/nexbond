@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Why NEXBOND — Honest by Choice, Trusted for Life",
   description:
-    "What others print vs. what NEXBOND delivers: full 36 yards length and full 50mm width on every roll. No short length. No less width. No compromise.",
+    "What others print vs. what NEXBOND delivers — full 36 yards and 50mm on every tape roll, certified hi-vis, high-intensity sign sheeting and hot-dip galvanized hardware across every range. No short measure. No downgrades.",
 };
 
 export default function WhyNexbondPage() {
@@ -22,7 +22,7 @@ export default function WhyNexbondPage() {
           label="Why NEXBOND"
           title="Honest by Choice."
           accent="Trusted for Life."
-          subtitle="We stand for honesty — you get true value. Here's the difference between what others print and what we deliver."
+          subtitle="We stand for honesty — you get true value. Here's the difference between what others print and what we deliver, on tape and on every other range we supply."
           watermark="HONESTY"
         />
         <WhyNexbond />

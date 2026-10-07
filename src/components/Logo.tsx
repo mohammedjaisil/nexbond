@@ -11,7 +11,7 @@ export function Logo({
         NE<span className="italic text-gold">X</span>BOND
       </span>
       {tagline && (
-        <span className="mt-1 text-[0.55rem] font-medium uppercase tracking-[0.25em] text-warmgrey">
+        <span className="mt-1 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-warmgrey">
           Strength in Every Bond.
         </span>
       )}

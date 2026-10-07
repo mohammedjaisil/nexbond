@@ -59,7 +59,10 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm">
             {QUICK_LINKS.map((l) => (
               <li key={l.label}>
-                <Link href={l.href} className="transition-colors hover:text-gold">
+                <Link
+                  href={l.href}
+                  className="-my-1 inline-block py-1 transition-colors hover:text-gold"
+                >
                   {l.label}
                 </Link>
               </li>
@@ -74,14 +77,17 @@ export function Footer() {
               <li key={c.id}>
                 <Link
                   href={`/products#${c.id}`}
-                  className="transition-colors hover:text-gold"
+                  className="-my-1 inline-block py-1 transition-colors hover:text-gold"
                 >
                   {c.name}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/products" className="transition-colors hover:text-gold">
+              <Link
+                href="/products"
+                className="-my-1 inline-block py-1 transition-colors hover:text-gold"
+              >
                 All Products
               </Link>
             </li>
@@ -93,7 +99,10 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm">
             <li className="flex items-start gap-3">
               <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              <a href="tel:+971501234567" className="transition-colors hover:text-gold">
+              <a
+                href="tel:+971501234567"
+                className="-my-1 py-1 transition-colors hover:text-gold"
+              >
                 +971 50 123 4567
               </a>
             </li>
@@ -101,7 +110,7 @@ export function Footer() {
               <MailIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <a
                 href="mailto:info@nexbondinfra.com"
-                className="transition-colors hover:text-gold"
+                className="-my-1 py-1 transition-colors hover:text-gold"
               >
                 info@nexbondinfra.com
               </a>
@@ -127,11 +136,11 @@ export function Footer() {
           <div className="flex items-center gap-5">
             <Link
               href="/privacy-policy"
-              className="transition-colors hover:text-gold"
+              className="py-1.5 transition-colors hover:text-gold"
             >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="transition-colors hover:text-gold">
+            <Link href="/terms" className="py-1.5 transition-colors hover:text-gold">
               Terms of Use
             </Link>
             <p className="rounded-full border border-gold/40 px-4 py-1.5 font-bold uppercase tracking-[0.2em] text-gold">

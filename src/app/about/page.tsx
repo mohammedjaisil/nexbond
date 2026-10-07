@@ -25,7 +25,7 @@ const VALUES = [
   },
   {
     title: "Reliability",
-    text: "Consistent performance roll after roll, order after order — so your projects never wait.",
+    text: "Consistent performance order after order, across every range — so your projects never wait.",
   },
   {
     title: "Trust",

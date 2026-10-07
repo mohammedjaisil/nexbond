@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Products — NEXBOND | Tapes, Safety, Signage & Infrastructure",
   description:
-    "The complete NEXBOND range: masking tapes, high-visibility safety gear, reflective traffic signs, road marking paint, road studs and infrastructure hardware — request a quote on any product.",
+    "The complete NEXBOND catalogue across six ranges: masking tapes, high-visibility safety gear, reflective traffic and wayfinding signage, road marking materials, road studs, speed bumps, guardrails and galvanized hardware — request a quote on any product.",
 };
 
 type Props = { searchParams: Promise<{ q?: string }> };

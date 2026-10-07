@@ -12,7 +12,10 @@ export const metadata: Metadata = {
     "The complete NEXBOND range: masking tapes, high-visibility safety gear, reflective traffic signs, road marking paint, road studs and infrastructure hardware — request a quote on any product.",
 };
 
-export default function ProductsPage() {
+type Props = { searchParams: Promise<{ q?: string }> };
+
+export default async function ProductsPage({ searchParams }: Props) {
+  const { q } = await searchParams;
   return (
     <>
       <Navbar />
@@ -21,10 +24,10 @@ export default function ProductsPage() {
           label="Our Products"
           title="Engineered for Performance."
           accent="Built for Trust."
-          subtitle="From masking tapes to safety, signage and infrastructure — a complete range, every item held to the same honest standard. Explore the full catalogue."
+          subtitle="Masking tapes, hi-vis safety gear, reflective signage, road marking materials, traffic calming and infrastructure hardware — six ranges, every item held to the same honest standard."
           watermark="PRODUCTS"
         />
-        <Catalog />
+        <Catalog query={q} />
         <PromiseBar />
         <CtaStrip />
       </main>

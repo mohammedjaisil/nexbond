@@ -11,11 +11,26 @@ export type Product = {
   features: string[];
   applications: string[];
   featured?: boolean;
+
+  /* ---- e-commerce fields (optional until the shop goes live) ---- */
+  /** Listed price in AED. Omitted while the catalogue is quote-based. */
+  price?: number;
+  /** Price-was value in AED, shown struck through next to `price`. */
+  compareAtPrice?: number;
+  /** What the price applies to, e.g. "per roll", "per box of 24". */
+  unit?: string;
+  /** Minimum order quantity shown on the card, e.g. "1 carton". */
+  moq?: string;
+  /** Merchandising badge, e.g. "New". Falls back to "Best Seller" when featured. */
+  badge?: string;
+  /** Defaults to true; set false to show the card as out of stock. */
+  inStock?: boolean;
 };
 
 export const PRODUCTS: Product[] = [
   {
     slug: "general-purpose-masking-tape",
+    unit: "per roll",
     name: "General Purpose Masking Tape",
     category: "Masking Tape",
     image: "/images/tape-general.webp",
@@ -48,6 +63,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "premium-masking-tape",
+    unit: "per roll",
     name: "Premium Masking Tape",
     category: "Masking Tape",
     image: "/images/tape-premium.webp",
@@ -81,6 +97,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "heavy-duty-masking-tape",
+    unit: "per roll",
     name: "Heavy Duty Masking Tape",
     category: "Masking Tape",
     image: "/images/tape-heavy-duty.webp",
@@ -440,6 +457,44 @@ export const PRODUCTS: Product[] = [
 
 export function getProduct(slug: string): Product | undefined {
   return PRODUCTS.find((p) => p.slug === slug);
+}
+
+/** Card/PDP price line. Quote-based products return a "Price on Request" label. */
+export function priceLabel(p: Product): {
+  value: string;
+  compareAt: string | null;
+  unit: string | null;
+  onRequest: boolean;
+} {
+  if (p.price == null) {
+    return { value: "Price on Request", compareAt: null, unit: null, onRequest: true };
+  }
+  const fmt = (n: number) =>
+    `AED ${n.toLocaleString("en-AE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  return {
+    value: fmt(p.price),
+    compareAt: p.compareAtPrice != null ? fmt(p.compareAtPrice) : null,
+    unit: p.unit ?? null,
+    onRequest: false,
+  };
+}
+
+/** Badge text for a product card, or null when it has none. */
+export function productBadge(p: Product): string | null {
+  return p.badge ?? (p.featured ? "Best Seller" : null);
+}
+
+/** Case-insensitive search across name, category, tagline and description. */
+export function searchProducts(query: string): Product[] {
+  const q = query.trim().toLowerCase();
+  if (!q) return PRODUCTS;
+  const terms = q.split(/\s+/);
+  return PRODUCTS.filter((p) => {
+    const haystack = [p.name, p.category, p.tagline, p.description, ...p.cardSpecs]
+      .join(" ")
+      .toLowerCase();
+    return terms.every((t) => haystack.includes(t));
+  });
 }
 
 /** URL-safe anchor id for a category, e.g. "Road Marking" -> "road-marking". */

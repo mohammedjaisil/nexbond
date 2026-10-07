@@ -16,10 +16,10 @@ export function PageHero({
   watermark?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink pb-20 pt-40 sm:pb-24 sm:pt-48">
+    <section className="relative overflow-hidden bg-ink pb-16 pt-44 sm:pb-20 sm:pt-48 lg:pt-52">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-14 flex select-none justify-center"
+        className="pointer-events-none absolute inset-x-0 top-32 flex select-none justify-center lg:top-40"
       >
         <span className="headline whitespace-nowrap text-[clamp(4rem,14vw,12rem)] text-white/[0.05]">
           {watermark ?? "NEXBOND"}

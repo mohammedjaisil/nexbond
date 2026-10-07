@@ -163,3 +163,66 @@ export const WhatsAppIcon = (p: IconProps) => (
     <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.65-1.17A9 9 0 1 0 12 3Zm0 1.8a7.2 7.2 0 1 1-3.68 13.39l-.44-.26-2.6.65.68-2.5-.28-.46A7.2 7.2 0 0 1 12 4.8Zm-2.9 3.4c-.18 0-.46.07-.7.33-.24.26-.92.9-.92 2.18 0 1.29.94 2.53 1.07 2.7.13.18 1.84 2.94 4.55 4 2.25.89 2.7.71 3.19.67.49-.05 1.58-.65 1.8-1.27.22-.63.22-1.16.16-1.27-.07-.11-.25-.18-.51-.31-.27-.13-1.58-.78-1.82-.87-.24-.09-.42-.13-.6.13-.18.27-.69.87-.84 1.05-.16.18-.31.2-.58.07a7.33 7.33 0 0 1-2.14-1.32 8 8 0 0 1-1.48-1.85c-.16-.26-.02-.4.11-.54.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.33-.02-.47-.07-.13-.6-1.45-.82-1.98-.22-.52-.44-.45-.6-.46l-.52-.01Z" />
   </svg>
 );
+
+export const SearchIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <circle cx="11" cy="11" r="7" />
+    <path d="m16.5 16.5 4 4" />
+  </svg>
+);
+
+export const CartIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M3 4h2.2l2.1 10.2a2 2 0 0 0 2 1.6h7.5a2 2 0 0 0 2-1.5L20.5 8H6" />
+    <circle cx="10" cy="19.5" r="1.4" />
+    <circle cx="17" cy="19.5" r="1.4" />
+  </svg>
+);
+
+export const HeartIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M12 20s-7.5-4.6-7.5-9.4A4.1 4.1 0 0 1 12 8.2a4.1 4.1 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20Z" />
+  </svg>
+);
+
+export const TruckIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M3 6h10v10H3zM13 9h4l3 3v4h-7" />
+    <circle cx="7" cy="18" r="1.6" />
+    <circle cx="17" cy="18" r="1.6" />
+  </svg>
+);
+
+export const BoxIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M12 3 3 7.5v9L12 21l9-4.5v-9L12 3Z" />
+    <path d="M3 7.5 12 12l9-4.5M12 12v9" />
+  </svg>
+);
+
+export const HeadsetIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M4 14v-2a8 8 0 0 1 16 0v2" />
+    <path d="M4 13h2.5v6H5a1 1 0 0 1-1-1v-5ZM20 13h-2.5v6H19a1 1 0 0 0 1-1v-5Z" />
+    <path d="M17.5 19a3 3 0 0 1-3 2.5H12" />
+  </svg>
+);
+
+export const ChevronLeftIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="m14.5 5-7 7 7 7" />
+  </svg>
+);
+
+export const ChevronRightIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="m9.5 5 7 7-7 7" />
+  </svg>
+);
+
+export const TagIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M20 12.5 12.5 20a2 2 0 0 1-2.8 0L4 14.3V4h10.3l5.7 5.7a2 2 0 0 1 0 2.8Z" />
+    <circle cx="9" cy="9" r="1.3" />
+  </svg>
+);

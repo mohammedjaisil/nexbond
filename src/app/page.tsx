@@ -1,9 +1,10 @@
 import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
+import { HeroSlider } from "@/components/HeroSlider";
 import { PromiseBar } from "@/components/PromiseBar";
-import { About } from "@/components/About";
-import { Products } from "@/components/Products";
 import { Categories } from "@/components/Categories";
+import { Products } from "@/components/Products";
+import { PromoBanners } from "@/components/PromoBanners";
+import { About } from "@/components/About";
 import { WhyNexbond } from "@/components/WhyNexbond";
 import { Features } from "@/components/Features";
 import { Contact } from "@/components/Contact";
@@ -14,19 +15,30 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <Hero />
+        <HeroSlider />
         <PromiseBar />
-        <About />
+        <Categories />
         <Products
           featured
-          limit={3}
-          label="Featured Products"
-          title="Our Best-Sellers."
-          accent="Ready to Ship."
+          limit={4}
+          label="Best Sellers"
+          title="What Sites Order"
+          accent="Again and Again."
+          tone="cream"
         />
+        <PromoBanners />
+        <Products
+          omitFeatured
+          limit={4}
+          id="more-products"
+          label="More From the Range"
+          title="Tapes, Marking, Signage"
+          accent="& Site Hardware."
+          tone="white"
+        />
+        <About />
         <WhyNexbond />
         <Features />
-        <Categories />
         <Contact />
       </main>
       <Footer />

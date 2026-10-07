@@ -1,66 +1,71 @@
 import Link from "next/link";
 import { PRODUCTS } from "@/lib/products";
 import { ProductCard } from "./ProductCard";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
 import { ArrowRightIcon } from "./icons";
 
 export function Products({
   heading = true,
   featured = false,
+  omitFeatured = false,
   limit,
   label = "Our Products",
-  title = "Engineered for Performance.",
-  accent = "Built for Trust.",
+  title = "Everything for Industrial, Safety",
+  accent = "& Infrastructure Work.",
+  tone = "cream",
+  id = "products",
 }: {
   heading?: boolean;
   /** Show only featured products, with a "view all" link. */
   featured?: boolean;
+  /** Skip featured products — pairs with a `featured` row above it. */
+  omitFeatured?: boolean;
   /** Cap the number of cards shown. */
   limit?: number;
   label?: string;
   title?: string;
   accent?: string;
+  /** Section background. */
+  tone?: "cream" | "white";
+  id?: string;
 }) {
-  const base = featured ? PRODUCTS.filter((p) => p.featured) : PRODUCTS;
+  let base = PRODUCTS;
+  if (featured) base = base.filter((p) => p.featured);
+  if (omitFeatured) base = base.filter((p) => !p.featured);
   const items = limit ? base.slice(0, limit) : base;
 
   return (
-    <section id="products" className="bg-ink py-24 sm:py-32">
+    <section
+      id={id}
+      className={tone === "white" ? "bg-white py-16 sm:py-20" : "bg-cream py-16 sm:py-20"}
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {heading && (
-          <Reveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="flex flex-col gap-5 border-b border-ink/10 pb-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-2xl">
               <p className="section-label">{label}</p>
-              <h2 className="headline mt-4 text-4xl text-white sm:text-5xl">
+              <h2 className="headline mt-3 text-3xl text-ink sm:text-4xl">
                 {title} <span className="text-gold">{accent}</span>
               </h2>
             </div>
-            {featured ? (
-              <Link
-                href="/products"
-                className="group inline-flex shrink-0 items-center gap-2 text-sm font-bold uppercase tracking-wider text-gold"
-              >
-                View All Products
-                <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            ) : (
-              <p className="max-w-xs text-sm leading-relaxed text-white/50">
-                A complete range for industrial, safety and infrastructure work —
-                every item held to the same honest standard.
-              </p>
-            )}
-          </Reveal>
+            <Link
+              href="/products"
+              className="group inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-ink/15 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-ink transition-colors hover:border-gold hover:text-gold sm:self-auto"
+            >
+              Shop All {PRODUCTS.length} Products
+              <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
         )}
 
-        <Stagger
-          className={`grid gap-7 sm:grid-cols-2 lg:grid-cols-3 ${heading ? "mt-14" : ""}`}
+        <div
+          className={`grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 ${
+            heading ? "mt-8" : ""
+          }`}
         >
           {items.map((p) => (
-            <StaggerItem key={p.slug}>
-              <ProductCard p={p} />
-            </StaggerItem>
+            <ProductCard key={p.slug} p={p} />
           ))}
-        </Stagger>
+        </div>
       </div>
     </section>
   );

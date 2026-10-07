@@ -84,7 +84,7 @@ export default async function ProductPage({ params }: Props) {
       <Navbar />
       <main>
         {/* ---------- PDP top: gallery + buy box ---------- */}
-        <section className="bg-ink pb-16 pt-28 sm:pt-32">
+        <section className="bg-ink pb-16 pt-40 sm:pt-44">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <nav
               aria-label="Breadcrumb"

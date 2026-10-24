@@ -82,7 +82,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 bg-ink/95 backdrop-blur-md transition-shadow duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 bg-ink transition-shadow duration-300 ${
         scrolled ? "shadow-lg shadow-black/30" : ""
       }`}
     >

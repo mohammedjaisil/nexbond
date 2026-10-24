@@ -19,10 +19,9 @@ html {
   scroll-padding-top: 11rem;
 }
 
-/* Long, media-heavy pages: keep paint work in check without content-visibility
-   (which interferes with the in-view reveal animations). The hero already
-   halts its WebGL / particle / background loops once scrolled past, and the
-   3D canvas render resolution is capped — those carry the scroll smoothness. */
+/* Scroll smoothness here comes from keeping paint cheap: no backdrop filters on
+   the fixed navbar, and the hero carousel only paints the slides next to the
+   active one. Avoid reintroducing blurs or filters over large scrolling areas. */
 
 body {
   background: var(--color-cream);

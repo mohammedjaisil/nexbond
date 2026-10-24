@@ -118,6 +118,14 @@ export function HeroSlider() {
     []
   );
 
+  // Only the current slide and its neighbours are ever on screen, so the rest
+  // skip their image and overlays entirely — seven full-viewport images at once
+  // is what made scrolling and first paint feel heavy.
+  const isNear = (i: number) => {
+    const d = Math.abs(i - index);
+    return d <= 1 || d === SLIDES.length - 1;
+  };
+
   // Auto-advance; held while hovered/focused and off entirely for reduced motion.
   useEffect(() => {
     if (paused || reduced) return;
@@ -158,7 +166,7 @@ export function HeroSlider() {
       >
         {/* ---------- Slide track ---------- */}
         <div
-          className={`flex ${reduced ? "" : "transition-transform duration-700 ease-[cubic-bezier(0.22,0.61,0.36,1)]"}`}
+          className={`flex transform-gpu ${reduced ? "" : "transition-transform duration-700 ease-[cubic-bezier(0.22,0.61,0.36,1)]"}`}
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {SLIDES.map((s, i) => (
@@ -169,42 +177,60 @@ export function HeroSlider() {
               aria-roledescription="slide"
               aria-label={`${i + 1} of ${SLIDES.length}: ${s.eyebrow}`}
             >
-              <div className="relative flex w-full min-h-[520px] flex-col justify-center pb-24 pt-44 sm:min-h-[580px] sm:pb-28 sm:pt-44 lg:min-h-[620px] lg:pt-48">
-                <Image
-                  src={s.image}
-                  alt=""
-                  fill
-                  priority={i === 0}
-                  loading={i === 0 ? undefined : i === 1 ? "eager" : "lazy"}
-                  sizes="100vw"
-                  className="object-cover object-center"
-                />
-                {/* Readability scrim: heavier on the copy side */}
-                <div
-                  aria-hidden
-                  className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/35 sm:to-transparent"
-                />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/60"
-                />
+              {/*
+                Height = viewport minus the quick-links strip underneath (~70px);
+                top padding clears the fixed navbar, which is 148px tall on mobile
+                (bar + search row), 80px from md (search row hidden) and 162px from
+                lg (utility bar + bar + category nav). min/max keep it sane on very
+                short and very tall screens.
+              */}
+              <div className="relative flex h-[calc(100svh-70px)] max-h-[820px] min-h-[440px] w-full flex-col justify-center pb-10 pt-[148px] md:pt-20 lg:pt-[162px]">
+                {isNear(i) && (
+                  <>
+                    <Image
+                      src={s.image}
+                      alt=""
+                      fill
+                      priority={i === 0}
+                      // Off-screen slides sit inside an overflow-hidden track, so
+                      // lazy loading would only fire as they slide in. The slide
+                      // that is up next is fetched ahead of time instead.
+                      loading={
+                        i === 0 ? undefined
+                        : i === (index + 1) % SLIDES.length ? "eager"
+                        : "lazy"
+                      }
+                      sizes="100vw"
+                      className="object-cover object-center"
+                    />
+                    {/* Readability scrim: heavier on the copy side */}
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/35 sm:to-transparent"
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/60"
+                    />
+                  </>
+                )}
 
                 <div className="relative mx-auto flex w-full max-w-7xl flex-col items-start px-5 sm:px-8">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold backdrop-blur-sm">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-4 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold">
                     <TagIcon className="h-3.5 w-3.5" />
                     {s.eyebrow}
                   </span>
 
-                  <h1 className="headline mt-6 max-w-2xl text-[clamp(2.5rem,9vw,4.5rem)] text-white lg:text-[clamp(3.5rem,6vw,5.5rem)]">
+                  <h1 className="headline mt-5 max-w-2xl text-[clamp(2rem,7.5vw,3.5rem)] text-white lg:text-[clamp(2.75rem,4.8vw,4.5rem)]">
                     {s.title}{" "}
                     <span className="text-gold">{s.accent}</span>
                   </h1>
 
-                  <p className="mt-5 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
+                  <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/70 sm:text-base lg:text-lg">
                     {s.copy}
                   </p>
 
-                  <div className="mt-8 flex flex-wrap items-center gap-3">
+                  <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-7">
                     <Link
                       href={s.cta.href}
                       tabIndex={i === index ? 0 : -1}
@@ -222,7 +248,7 @@ export function HeroSlider() {
                     </Link>
                   </div>
 
-                  <p className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/50">
+                  <p className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/50">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                     {s.note || rangeNote}
                   </p>
@@ -237,7 +263,7 @@ export function HeroSlider() {
           type="button"
           onClick={() => go(index - 1)}
           aria-label="Previous slide"
-          className="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/20 bg-ink/50 p-3 text-white backdrop-blur-sm transition-colors hover:border-gold hover:text-gold sm:block"
+          className="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/20 bg-ink/70 p-3 text-white transition-colors hover:border-gold hover:text-gold sm:block"
         >
           <ChevronLeftIcon className="h-5 w-5" />
         </button>
@@ -245,7 +271,7 @@ export function HeroSlider() {
           type="button"
           onClick={() => go(index + 1)}
           aria-label="Next slide"
-          className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/20 bg-ink/50 p-3 text-white backdrop-blur-sm transition-colors hover:border-gold hover:text-gold sm:block"
+          className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/20 bg-ink/70 p-3 text-white transition-colors hover:border-gold hover:text-gold sm:block"
         >
           <ChevronRightIcon className="h-5 w-5" />
         </button>

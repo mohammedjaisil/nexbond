@@ -5,7 +5,6 @@ import { Categories } from "@/components/Categories";
 import { Products } from "@/components/Products";
 import { PromoBanners } from "@/components/PromoBanners";
 import { About } from "@/components/About";
-import { WhyNexbond } from "@/components/WhyNexbond";
 import { Features } from "@/components/Features";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -37,7 +36,6 @@ export default function Home() {
           tone="white"
         />
         <About />
-        <WhyNexbond />
         <Features />
         <Contact />
       </main>

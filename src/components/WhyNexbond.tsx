@@ -112,7 +112,7 @@ export function WhyNexbond() {
           <div className="group overflow-hidden rounded-2xl">
             <Image
               src="/images/why-measure.webp"
-              alt="A NEXBOND masking tape roll being measured — every product is supplied at its stated specification"
+              alt="A tape measure extended across a workbench — every NEXBOND product is supplied at its stated specification"
               width={1400}
               height={1980}
               sizes="(max-width: 1024px) 100vw, 50vw"

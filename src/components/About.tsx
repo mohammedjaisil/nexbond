@@ -20,7 +20,7 @@ export function About() {
           <div className="group overflow-hidden rounded-2xl">
             <Image
               src="/images/about-rolls.webp"
-              alt="NEXBOND masking tape rolls on a clean surface"
+              alt="Racked and palletised stock inside the NEXBOND warehouse"
               width={1400}
               height={1980}
               sizes="(max-width: 1024px) 100vw, 50vw"

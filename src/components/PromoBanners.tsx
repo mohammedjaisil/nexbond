@@ -52,6 +52,7 @@ export function PromoBanners() {
             src={FEATURE.image}
             alt=""
             fill
+            quality={90}
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover opacity-55 transition-transform duration-500 group-hover:scale-105"
           />
@@ -88,6 +89,7 @@ export function PromoBanners() {
                 src={promo.image}
                 alt=""
                 fill
+                quality={90}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-45 transition-transform duration-500 group-hover:scale-105"
               />

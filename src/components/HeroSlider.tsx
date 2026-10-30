@@ -25,7 +25,7 @@ type Slide = {
 const SLIDES: Slide[] = [
   {
     id: "all-ranges",
-    image: "/images/guardrails.webp",
+    image: "/images/thermoplastic-marking.webp",
     eyebrow: "Six Ranges · One Supplier",
     title: "Everything the Site Needs.",
     accent: "Honestly Measured.",
@@ -45,7 +45,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: "signage",
-    image: "/images/traffic-signs.webp",
+    image: "/images/directional-signage.webp",
     eyebrow: "Traffic & Wayfinding Signage",
     title: "Seen Day",
     accent: "and Night.",
@@ -178,13 +178,12 @@ export function HeroSlider() {
               aria-label={`${i + 1} of ${SLIDES.length}: ${s.eyebrow}`}
             >
               {/*
-                Height = viewport minus the quick-links strip underneath (~70px);
-                top padding clears the fixed navbar, which is 148px tall on mobile
-                (bar + search row), 80px from md (search row hidden) and 162px from
-                lg (utility bar + bar + category nav). min/max keep it sane on very
-                short and very tall screens.
+                Height = viewport; top padding clears the fixed navbar, which is
+                148px tall on mobile (bar + search row), 80px from md (search row
+                hidden) and 162px from lg (utility bar + bar + category nav). min/max
+                keep it sane on very short and very tall screens.
               */}
-              <div className="relative flex h-[calc(100svh-70px)] max-h-[820px] min-h-[440px] w-full flex-col justify-center pb-10 pt-[148px] md:pt-20 lg:pt-[162px]">
+              <div className="relative flex h-svh max-h-[820px] min-h-[440px] w-full flex-col justify-center pb-10 pt-[148px] md:pt-20 lg:pt-[162px]">
                 {isNear(i) && (
                   <>
                     <Image
@@ -200,6 +199,7 @@ export function HeroSlider() {
                         : i === (index + 1) % SLIDES.length ? "eager"
                         : "lazy"
                       }
+                      quality={90}
                       sizes="100vw"
                       className="object-cover object-center"
                     />
@@ -296,25 +296,6 @@ export function HeroSlider() {
                 }`}
               />
             </button>
-          ))}
-        </div>
-      </div>
-
-      {/* ---------- Category quick-links under the banner ---------- */}
-      <div className="border-y border-white/10 bg-coal/40">
-        <div className="mx-auto flex max-w-7xl gap-2.5 overflow-x-auto px-5 py-4 sm:px-8 no-scrollbar">
-          <span className="hidden shrink-0 items-center pr-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/40 sm:flex">
-            Shop by
-          </span>
-          {categories.map((c) => (
-            <Link
-              key={c.id}
-              href={`/products#${c.id}`}
-              className="shrink-0 whitespace-nowrap rounded-full border border-white/12 px-4 py-2.5 text-xs font-semibold text-white/70 transition-colors hover:border-gold/60 hover:text-gold"
-            >
-              {c.name}
-              <span className="ml-1.5 text-white/35">{c.count}</span>
-            </Link>
           ))}
         </div>
       </div>

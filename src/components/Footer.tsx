@@ -23,7 +23,7 @@ const SOCIALS = [
   { label: "LinkedIn", href: "https://linkedin.com", Icon: LinkedInIcon },
   { label: "Instagram", href: "https://instagram.com", Icon: InstagramIcon },
   { label: "Facebook", href: "https://facebook.com", Icon: FacebookIcon },
-  { label: "WhatsApp", href: "https://wa.me/971501234567", Icon: WhatsAppIcon },
+  { label: "WhatsApp", href: "https://wa.me/971507262838", Icon: WhatsAppIcon },
 ];
 
 export function Footer() {
@@ -32,7 +32,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
         <div>
           <div className="text-white">
-            <Logo tagline />
+            <Logo />
           </div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed">
             Industrial, safety and infrastructure solutions from Sharjah, UAE.
@@ -100,10 +100,10 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <a
-                href="tel:+971501234567"
+                href="tel:+97142868633"
                 className="-my-1 py-1 transition-colors hover:text-gold"
               >
-                +971 50 123 4567
+                +971 4 286 8633
               </a>
             </li>
             <li className="flex items-start gap-3">
@@ -118,9 +118,9 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <PinIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <span>
-                P.O. Box 123456, Sharjah,
+                First Floor, 119, Al Garhoud Star Building,
                 <br />
-                United Arab Emirates
+                Al Garhoud, Dubai, United Arab Emirates
               </span>
             </li>
           </ul>

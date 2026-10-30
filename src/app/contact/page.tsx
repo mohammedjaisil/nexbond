@@ -8,17 +8,17 @@ import { Stagger, StaggerItem } from "@/components/Reveal";
 import { MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Contact — NEXBOND Industrial Solutions LLC, Sharjah UAE",
+  title: "Contact — NEXBOND Industrial Solutions LLC, Dubai UAE",
   description:
-    "Get in touch with NEXBOND for bulk orders, product samples or partnership inquiries. Sharjah, United Arab Emirates.",
+    "Get in touch with NEXBOND for bulk orders, product samples or partnership inquiries. Dubai, United Arab Emirates.",
 };
 
 const CHANNELS = [
   {
     Icon: PhoneIcon,
     title: "Call Us",
-    line1: "+971 50 123 4567",
-    href: "tel:+971501234567",
+    line1: "+971 4 286 8633",
+    href: "tel:+97142868633",
   },
   {
     Icon: MailIcon,
@@ -29,7 +29,7 @@ const CHANNELS = [
   {
     Icon: PinIcon,
     title: "Visit Us",
-    line1: "P.O. Box 123456, Sharjah, UAE",
+    line1: "119, Al Garhoud Star Building, Dubai, UAE",
     href: undefined,
   },
 ];

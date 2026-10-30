@@ -3,7 +3,7 @@ import Link from "next/link";
 import { catId, priceLabel, productBadge, type Product } from "@/lib/products";
 import { CartIcon, WhatsAppIcon } from "./icons";
 
-const WHATSAPP = "971501234567";
+const WHATSAPP = "971507262838";
 
 export function ProductCard({ p }: { p: Product }) {
   const price = priceLabel(p);
@@ -24,6 +24,7 @@ export function ProductCard({ p }: { p: Product }) {
             src={p.image}
             alt={p.name}
             fill
+            quality={90}
             sizes="(max-width: 640px) 48vw, (max-width: 1024px) 31vw, 23vw"
             className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
           />

@@ -1,20 +1,16 @@
-export function Logo({
-  className = "",
-  tagline = false,
-}: {
-  className?: string;
-  tagline?: boolean;
-}) {
+import Image from "next/image";
+
+export function Logo({ className = "" }: { className?: string }) {
   return (
-    <span className={`inline-flex flex-col leading-none ${className}`}>
-      <span className="headline text-2xl tracking-wide">
-        NE<span className="italic text-gold">X</span>BOND
-      </span>
-      {tagline && (
-        <span className="mt-1 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-warmgrey">
-          Strength in Every Bond.
-        </span>
-      )}
-    </span>
+    <Image
+      src="/images/nexbond-logo.webp"
+      alt="NEXBOND — Strength in Every Bond"
+      width={1643}
+      height={387}
+      quality={90}
+      priority
+      sizes="280px"
+      className={`h-12 w-auto sm:h-14 ${className}`}
+    />
   );
 }

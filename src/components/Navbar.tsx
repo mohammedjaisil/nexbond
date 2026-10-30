@@ -22,8 +22,8 @@ const LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
-const PHONE = "+971501234567";
-const WHATSAPP = "971501234567";
+const PHONE = "+97142868633";
+const WHATSAPP = "971507262838";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -98,7 +98,7 @@ export function Navbar() {
               className="inline-flex items-center gap-1.5 py-1 transition-colors hover:text-gold"
             >
               <PhoneIcon className="h-3.5 w-3.5" />
-              {PHONE}
+              +971 4 286 8633
             </a>
             <a
               href={`https://wa.me/${WHATSAPP}`}

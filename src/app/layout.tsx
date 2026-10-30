@@ -63,9 +63,12 @@ const jsonLd = {
     "Supplier of industrial tapes, high-visibility safety gear, reflective traffic signage, road marking materials, traffic calming products and infrastructure hardware in Sharjah, UAE.",
   url: "https://nexbondinfra.com",
   email: "info@nexbondinfra.com",
+  telephone: "+97142868633",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Sharjah",
+    streetAddress: "First Floor, 119, Al Garhoud Star Building, Al Garhoud",
+    addressLocality: "Dubai",
+    postOfficeBoxNumber: "34644",
     addressCountry: "AE",
   },
   slogan: "Strength in Every Bond",

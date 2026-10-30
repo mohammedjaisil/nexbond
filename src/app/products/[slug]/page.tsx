@@ -17,8 +17,8 @@ import { PRODUCTS, getProduct } from "@/lib/products";
 
 type Props = { params: Promise<{ slug: string }> };
 
-const WHATSAPP = "971501234567";
-const PHONE = "+971501234567";
+const WHATSAPP = "971507262838";
+const PHONE = "+97142868633";
 
 const TRUST = [
   { icon: ShieldIcon, label: "Made in UAE" },
@@ -113,6 +113,7 @@ export default async function ProductPage({ params }: Props) {
                       alt={product.name}
                       fill
                       priority
+                      quality={90}
                       sizes="(max-width: 1024px) 100vw, 45vw"
                       className="object-cover"
                     />
@@ -315,6 +316,7 @@ export default async function ProductPage({ params }: Props) {
                         src={p.image}
                         alt={p.name}
                         fill
+                        quality={90}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />

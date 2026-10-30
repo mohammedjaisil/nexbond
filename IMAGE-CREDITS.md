@@ -24,5 +24,5 @@ traceable.
 | `why-measure.webp` | https://www.pexels.com/photo/30413398/ |
 | `og-image.jpg` | https://www.pexels.com/photo/11054546/ |
 
-Each file is cropped to the dimensions the corresponding `<Image>` declares, so
-replacing one means matching the existing width and height.
+Each file is the full, uncropped photograph at up to 2560px wide (webp q76–86).
+`<Image fill>` crops at display time, so re-encode from the original when replacing one.

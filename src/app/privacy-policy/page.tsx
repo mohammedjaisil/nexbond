@@ -33,7 +33,7 @@ const SECTIONS = [
   },
   {
     h: "Contact",
-    p: "For any privacy-related questions, contact NEXBOND Industrial Solutions LLC, P.O. Box 123456, Sharjah, United Arab Emirates — info@nexbondinfra.com.",
+    p: "For any privacy-related questions, contact NEXBOND Industrial Solutions LLC, First Floor, 119, Al Garhoud Star Building, Al Garhoud, Dubai, United Arab Emirates — info@nexbondinfra.com.",
   },
 ];
 

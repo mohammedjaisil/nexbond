@@ -54,7 +54,7 @@ export function Contact() {
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="tel:+971501234567"
+              href="tel:+97142868633"
               className="btn-sweep inline-flex items-center gap-2 rounded-full border-2 border-ink px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-ink transition-colors [--sweep-color:#1a1a1a] hover:text-gold"
             >
               <PhoneIcon className="h-4 w-4" />
@@ -65,7 +65,7 @@ export function Contact() {
             <p className="font-bold uppercase tracking-wider text-ink">
               NEXBOND Industrial Solutions LLC
             </p>
-            <p>P.O. Box 123456, Sharjah, United Arab Emirates</p>
+            <p>First Floor, 119, Al Garhoud Star Building, Al Garhoud, Dubai, United Arab Emirates</p>
             <p>info@nexbondinfra.com</p>
             <p>Rahul Kumar — Managing Director</p>
           </div>

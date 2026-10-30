@@ -39,11 +39,11 @@ function initials(name: string) {
 
 export function Team() {
   return (
-    <section aria-label="Our team" className="bg-white py-24 sm:py-32">
+    <section aria-label="Our team" className="bg-white section-y">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="max-w-2xl">
           <p className="section-label">Our Team</p>
-          <h2 className="headline mt-4 text-4xl text-ink sm:text-5xl">
+          <h2 className="headline text-h2 mt-4 text-ink">
             The People Behind{" "}
             <span className="text-gold">Every Bond.</span>
           </h2>
@@ -60,7 +60,7 @@ export function Team() {
                 <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-gold to-[#b8860b] text-2xl font-bold text-ink shadow-inner">
                   {initials(m.name)}
                 </div>
-                <h3 className="headline mt-5 text-xl text-ink">{m.name}</h3>
+                <h3 className="headline text-h4 mt-5 text-ink">{m.name}</h3>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-gold">
                   {m.role}
                 </p>

@@ -4,10 +4,10 @@ import { ArrowRightIcon } from "./icons";
 
 export function CtaStrip() {
   return (
-    <section className="bg-gold py-16">
+    <section className="bg-gold py-10 sm:py-12">
       <Reveal className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-5 sm:px-8 lg:flex-row">
         <div className="text-center lg:text-left">
-          <h2 className="headline text-3xl text-ink sm:text-4xl">
+          <h2 className="headline text-h2 text-ink">
             Ready to Build Stronger Bonds?
           </h2>
           <p className="mt-2 text-ink/70">

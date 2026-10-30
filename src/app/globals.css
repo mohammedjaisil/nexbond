@@ -12,6 +12,13 @@
   /* Typography */
   --font-display: var(--font-barlow), "Arial Narrow", sans-serif;
   --font-body: var(--font-dm-sans), Arial, sans-serif;
+
+  /* Type scale: the only heading sizes used across the site */
+  --text-display: clamp(1.875rem, 1.2rem + 2.4vw, 3rem);
+  --text-h1: clamp(1.875rem, 1.4rem + 1.8vw, 2.75rem);
+  --text-h2: clamp(1.625rem, 1.3rem + 1.2vw, 2.25rem);
+  --text-h3: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --text-h4: 1.125rem;
 }
 
 html {
@@ -39,6 +46,11 @@ body {
   /* Uppercase letter-spaced section label */
   .section-label {
     @apply inline-block text-xs font-semibold uppercase tracking-[0.3em] text-gold;
+  }
+
+  /* Standard vertical rhythm for page sections */
+  .section-y {
+    @apply py-14 sm:py-16 lg:py-20;
   }
 
   /* Display headline base */

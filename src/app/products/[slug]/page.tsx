@@ -155,7 +155,7 @@ export default async function ProductPage({ params }: Props) {
                   </div>
 
                   <p className="section-label mt-5">{product.tagline}</p>
-                  <h1 className="headline mt-3 text-4xl text-white sm:text-5xl">
+                  <h1 className="headline text-h1 mt-3 text-white">
                     {product.name}
                   </h1>
                   <p className="mt-6 max-w-xl leading-relaxed text-white/60">
@@ -184,7 +184,7 @@ export default async function ProductPage({ params }: Props) {
                     <p className="text-sm text-white/60">
                       Pricing is tailored to your quantity and delivery location.
                     </p>
-                    <p className="headline mt-1 text-2xl text-white">
+                    <p className="headline text-h3 mt-1 text-white">
                       Request a Custom Quote
                     </p>
                     <div className="mt-5 flex flex-col gap-3 sm:flex-row">
@@ -233,11 +233,11 @@ export default async function ProductPage({ params }: Props) {
         </section>
 
         {/* ---------- Full specifications + applications ---------- */}
-        <section className="bg-cream py-20 sm:py-24">
+        <section className="bg-cream section-y">
           <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
             <Reveal>
               <p className="section-label">Specifications</p>
-              <h2 className="headline mt-4 text-3xl text-ink sm:text-4xl">
+              <h2 className="headline text-h2 mt-4 text-ink">
                 Every Number on the Label{" "}
                 <span className="text-gold">Is Real.</span>
               </h2>
@@ -296,11 +296,11 @@ export default async function ProductPage({ params }: Props) {
         </section>
 
         {/* ---------- Related products ---------- */}
-        <section className="bg-white py-20 sm:py-24">
+        <section className="bg-white section-y">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <Reveal>
               <p className="section-label">More From NEXBOND</p>
-              <h2 className="headline mt-4 text-3xl text-ink sm:text-4xl">
+              <h2 className="headline text-h2 mt-4 text-ink">
                 You May Also Need.
               </h2>
             </Reveal>
@@ -325,7 +325,7 @@ export default async function ProductPage({ params }: Props) {
                       </span>
                     </div>
                     <div className="flex flex-1 flex-col p-6">
-                      <h3 className="headline text-lg text-ink">{p.name}</h3>
+                      <h3 className="headline text-h4 text-ink">{p.name}</h3>
                       <p className="mt-1 text-sm text-warmgrey">
                         {p.description}
                       </p>

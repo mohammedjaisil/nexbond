@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
+import { SearchBox } from "./SearchBox";
 import { getCategories } from "@/lib/products";
 import {
   CloseIcon,
   MailIcon,
   MenuIcon,
   PhoneIcon,
-  SearchIcon,
   CartIcon,
   WhatsAppIcon,
 } from "./icons";
@@ -33,15 +33,8 @@ function isActive(pathname: string, href: string) {
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
   const pathname = usePathname();
   const categories = getCategories();
-
-  // Mirror ?q= back into the field after mount. Read from location rather than
-  // useSearchParams so pages stay statically prerenderable.
-  useEffect(() => {
-    setQuery(new URLSearchParams(window.location.search).get("q") ?? "");
-  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -54,31 +47,6 @@ export function Navbar() {
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
-
-  // GET form → /products?q=… so search works without JS too.
-  const searchField = (autoId: string, placeholder = "Search products…") => (
-    <form action="/products" role="search" className="relative w-full">
-      <label htmlFor={autoId} className="sr-only">
-        Search products
-      </label>
-      <input
-        id={autoId}
-        type="search"
-        name="q"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder={placeholder}
-        className="w-full rounded-full border border-white/15 bg-white/[0.06] py-2.5 pl-11 pr-4 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-gold/70 focus:bg-white/10"
-      />
-      <button
-        type="submit"
-        aria-label="Search"
-        className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full p-2.5 text-white/60 transition-colors hover:text-gold"
-      >
-        <SearchIcon className="h-4 w-4" />
-      </button>
-    </form>
-  );
 
   return (
     <header
@@ -127,10 +95,7 @@ export function Navbar() {
         </Link>
 
         <div className="hidden flex-1 md:block">
-          {searchField(
-            "site-search",
-            "Search tapes, signage, safety gear, road marking, hardware…"
-          )}
+          <SearchBox placeholder="Search tapes, signage, safety gear, road marking, hardware…" />
         </div>
 
         <div className="ml-auto flex items-center gap-2 md:ml-0">
@@ -155,7 +120,7 @@ export function Navbar() {
 
       {/* ---------- Mobile search row ---------- */}
       <div className="border-t border-white/10 px-5 py-3 md:hidden">
-        {searchField("mobile-search")}
+        <SearchBox />
       </div>
 
       {/* ---------- Category nav ---------- */}
@@ -228,7 +193,9 @@ export function Navbar() {
               </button>
             </div>
 
-            <div className="mt-6">{searchField("drawer-search")}</div>
+            <div className="mt-6">
+              <SearchBox />
+            </div>
 
             <p className="mt-8 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/35">
               Shop by Category

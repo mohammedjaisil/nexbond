@@ -64,7 +64,7 @@ export function PromoBanners() {
             <p className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-gold">
               {FEATURE.eyebrow}
             </p>
-            <h3 className="headline mt-3 max-w-md text-3xl text-white sm:text-4xl">
+            <h3 className="headline text-h2 mt-3 max-w-md text-white">
               {FEATURE.title}
             </h3>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-white/65">
@@ -102,7 +102,7 @@ export function PromoBanners() {
                   <p className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-gold">
                     {promo.eyebrow}
                   </p>
-                  <h3 className="headline mt-2 max-w-xs text-xl text-white sm:text-2xl">
+                  <h3 className="headline text-h4 mt-2 max-w-xs text-white">
                     {promo.title}
                   </h3>
                   <p className="mt-2 max-w-xs text-xs leading-relaxed text-white/60">

@@ -178,12 +178,12 @@ export function HeroSlider() {
               aria-label={`${i + 1} of ${SLIDES.length}: ${s.eyebrow}`}
             >
               {/*
-                Height = viewport; top padding clears the fixed navbar, which is
-                148px tall on mobile (bar + search row), 80px from md (search row
-                hidden) and 162px from lg (utility bar + bar + category nav). min/max
-                keep it sane on very short and very tall screens.
+                Fills the viewport up to 760px but grows with its content, so copy is never
+                clipped on short screens. Top padding clears the fixed navbar, which is
+                148px tall on mobile (bar + search row), 80px from md (search row hidden)
+                and 162px from lg (utility bar + bar + category nav).
               */}
-              <div className="relative flex h-svh max-h-[820px] min-h-[440px] w-full flex-col justify-center pb-10 pt-[148px] md:pt-20 lg:pt-[162px]">
+              <div className="relative flex min-h-[min(100svh,760px)] w-full flex-col justify-center pb-14 pt-[172px] md:pt-28 lg:pt-[186px]">
                 {isNear(i) && (
                   <>
                     <Image
@@ -221,20 +221,20 @@ export function HeroSlider() {
                     {s.eyebrow}
                   </span>
 
-                  <h1 className="headline mt-5 max-w-2xl text-[clamp(2rem,7.5vw,3.5rem)] text-white lg:text-[clamp(2.75rem,4.8vw,4.5rem)]">
+                  <h1 className="headline text-display mt-4 max-w-2xl text-white">
                     {s.title}{" "}
                     <span className="text-gold">{s.accent}</span>
                   </h1>
 
-                  <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/70 sm:text-base lg:text-lg">
+                  <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/70 sm:text-base">
                     {s.copy}
                   </p>
 
-                  <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-7">
+                  <div className="mt-5 flex flex-wrap items-center gap-3">
                     <Link
                       href={s.cta.href}
                       tabIndex={i === index ? 0 : -1}
-                      className="btn-sweep group inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-ink [--sweep-color:#fff]"
+                      className="btn-sweep group inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold uppercase tracking-wider text-ink [--sweep-color:#fff]"
                     >
                       {s.cta.label}
                       <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -242,13 +242,13 @@ export function HeroSlider() {
                     <Link
                       href="/contact"
                       tabIndex={i === index ? 0 : -1}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-gold hover:text-gold"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-gold hover:text-gold"
                     >
                       Request a Quote
                     </Link>
                   </div>
 
-                  <p className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/50">
+                  <p className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/50">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                     {s.note || rangeNote}
                   </p>
@@ -263,17 +263,17 @@ export function HeroSlider() {
           type="button"
           onClick={() => go(index - 1)}
           aria-label="Previous slide"
-          className="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/20 bg-ink/70 p-3 text-white transition-colors hover:border-gold hover:text-gold sm:block"
+          className="absolute bottom-3 right-[4.25rem] z-10 hidden rounded-full border border-white/20 bg-ink/70 p-2.5 text-white transition-colors hover:border-gold hover:text-gold sm:block"
         >
-          <ChevronLeftIcon className="h-5 w-5" />
+          <ChevronLeftIcon className="h-4 w-4" />
         </button>
         <button
           type="button"
           onClick={() => go(index + 1)}
           aria-label="Next slide"
-          className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/20 bg-ink/70 p-3 text-white transition-colors hover:border-gold hover:text-gold sm:block"
+          className="absolute bottom-3 right-5 z-10 hidden rounded-full border border-white/20 bg-ink/70 p-2.5 text-white transition-colors hover:border-gold hover:text-gold sm:block"
         >
-          <ChevronRightIcon className="h-5 w-5" />
+          <ChevronRightIcon className="h-4 w-4" />
         </button>
 
         {/* ---------- Dots ---------- */}

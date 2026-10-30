@@ -27,12 +27,12 @@ export function WhyNexbond() {
   return (
     <section
       id="why-nexbond"
-      className="overflow-hidden bg-cream py-16 sm:py-20 lg:py-24"
+      className="overflow-hidden bg-cream section-y"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
         <div className="order-2 lg:order-1">
           <p className="section-label">Why NEXBOND</p>
-          <h2 className="headline mt-3 text-3xl text-ink sm:text-4xl lg:text-5xl">
+          <h2 className="headline text-h2 mt-3 text-ink">
             What Others Print vs.{" "}
             <span className="text-gold">What We Deliver.</span>
           </h2>
@@ -56,7 +56,7 @@ export function WhyNexbond() {
                   i > 0 ? "border-t border-ink/8" : "border-t border-ink/8 sm:border-t-0"
                 }`}
               >
-                <p className="headline text-2xl text-ink sm:text-xl lg:text-2xl">
+                <p className="headline text-h3 text-ink">
                   <span className="mr-2 align-middle text-[0.65rem] font-bold uppercase tracking-[0.15em] text-warmgrey sm:hidden">
                     Printed
                   </span>
@@ -102,7 +102,7 @@ export function WhyNexbond() {
             </ul>
           </div>
 
-          <p className="headline mt-8 text-lg text-ink sm:text-xl">
+          <p className="headline text-h4 mt-8 text-ink">
             No Short Length. No Less Width. No Downgraded Materials.{" "}
             <span className="text-gold">Only Honest Quality.</span>
           </p>

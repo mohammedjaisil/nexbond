@@ -36,14 +36,14 @@ export function Products({
   return (
     <section
       id={id}
-      className={tone === "white" ? "bg-white py-16 sm:py-20" : "bg-cream py-16 sm:py-20"}
+      className={`section-y ${tone === "white" ? "bg-white" : "bg-cream"}`}
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {heading && (
           <div className="flex flex-col gap-5 border-b border-ink/10 pb-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-2xl">
               <p className="section-label">{label}</p>
-              <h2 className="headline mt-3 text-3xl text-ink sm:text-4xl">
+              <h2 className="headline text-h2 mt-3 text-ink">
                 {title} <span className="text-gold">{accent}</span>
               </h2>
             </div>

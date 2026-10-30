@@ -28,13 +28,13 @@ export function Categories() {
     <section
       id="categories"
       aria-label="Shop by category"
-      className="bg-white py-16 sm:py-20"
+      className="bg-white section-y"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col gap-5 border-b border-ink/10 pb-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <p className="section-label">Shop by Category</p>
-            <h2 className="headline mt-3 text-3xl text-ink sm:text-4xl">
+            <h2 className="headline text-h2 mt-3 text-ink">
               Six Ranges.{" "}
               <span className="text-gold">One Honest Standard.</span>
             </h2>

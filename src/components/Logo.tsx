@@ -9,8 +9,8 @@ export function Logo({ className = "" }: { className?: string }) {
       height={387}
       quality={90}
       priority
-      sizes="280px"
-      className={`h-12 w-auto sm:h-14 ${className}`}
+      sizes="170px"
+      className={`h-9 w-auto sm:h-10 ${className}`}
     />
   );
 }

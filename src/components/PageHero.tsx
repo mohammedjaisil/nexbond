@@ -16,24 +16,24 @@ export function PageHero({
   watermark?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-44 sm:pb-20 sm:pt-48 lg:pt-52">
+    <section className="relative overflow-hidden bg-ink pb-10 pt-44 sm:pb-12 md:pt-28 lg:pt-48">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-32 flex select-none justify-center lg:top-40"
+        className="pointer-events-none absolute inset-x-0 top-32 flex select-none justify-center md:top-16 lg:top-40"
       >
-        <span className="headline whitespace-nowrap text-[clamp(4rem,14vw,12rem)] text-white/[0.05]">
+        <span className="headline whitespace-nowrap text-[clamp(3rem,10vw,8rem)] text-white/[0.05]">
           {watermark ?? "NEXBOND"}
         </span>
       </div>
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <p className="section-label">{label}</p>
-          <h1 className="headline mt-4 max-w-4xl text-5xl text-white sm:text-6xl">
+          <h1 className="headline text-h1 mt-4 max-w-4xl text-white">
             {title}
             {accent && <span className="text-gold"> {accent}</span>}
           </h1>
           {subtitle && (
-            <p className="mt-6 max-w-2xl text-white/60">{subtitle}</p>
+            <p className="mt-4 max-w-2xl text-white/60">{subtitle}</p>
           )}
         </Reveal>
       </div>

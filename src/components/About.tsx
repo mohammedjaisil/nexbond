@@ -14,7 +14,7 @@ const STATS = [
 
 export function About() {
   return (
-    <section id="about" className="overflow-hidden bg-white py-24 sm:py-32">
+    <section id="about" className="overflow-hidden bg-white section-y">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <Reveal className="relative">
           <div className="group overflow-hidden rounded-2xl">
@@ -30,7 +30,7 @@ export function About() {
           </div>
           {/* Floating accent card breaking the grid */}
           <div className="absolute bottom-3 right-3 rounded-xl bg-ink px-5 py-3 shadow-xl sm:-bottom-6 sm:-right-4 sm:px-6 sm:py-4 lg:-right-8">
-            <p className="headline text-2xl text-gold sm:text-3xl">Made in UAE</p>
+            <p className="headline text-h3 text-gold">Made in UAE</p>
             <p className="mt-1 text-[0.65rem] uppercase tracking-[0.12em] text-white/60 sm:text-xs sm:tracking-[0.2em]">
               Sharjah, United Arab Emirates
             </p>
@@ -40,7 +40,7 @@ export function About() {
         <div>
           <Reveal>
             <p className="section-label">Who We Are</p>
-            <h2 className="headline mt-4 text-4xl text-ink sm:text-5xl">
+            <h2 className="headline text-h2 mt-4 text-ink">
               We Believe in Honest Measurements and{" "}
               <span className="text-gold">Premium Quality.</span>
             </h2>
@@ -61,7 +61,7 @@ export function About() {
             <div className="mt-9 grid grid-cols-3 divide-x divide-ink/10">
               {STATS.map((s) => (
                 <div key={s.label} className="px-3 first:pl-0 sm:px-4">
-                  <p className="headline text-2xl text-ink sm:text-4xl">
+                  <p className="headline text-h3 text-ink">
                     <CountUp value={s.value} suffix={s.suffix} />
                   </p>
                   <p className="mt-2 text-[0.7rem] font-medium uppercase tracking-wider text-warmgrey sm:text-xs">

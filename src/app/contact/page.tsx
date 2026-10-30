@@ -46,13 +46,13 @@ export default function ContactPage() {
           subtitle="Bulk orders, product samples, distribution or partnership inquiries — our team responds within one business day."
           watermark="CONTACT"
         />
-        <section className="bg-cream py-16">
+        <section className="bg-cream section-y">
           <Stagger className="mx-auto grid max-w-6xl gap-5 px-5 sm:grid-cols-3 sm:px-8">
             {CHANNELS.map(({ Icon, title, line1, href }) => (
               <StaggerItem key={title}>
                 <div className="flex h-full flex-col items-center rounded-2xl border border-ink/5 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-lg">
                   <Icon className="h-8 w-8 text-gold" />
-                  <h2 className="headline mt-4 text-xl text-ink">{title}</h2>
+                  <h2 className="headline text-h4 mt-4 text-ink">{title}</h2>
                   {href ? (
                     <a
                       href={href}

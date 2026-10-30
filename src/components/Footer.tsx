@@ -29,7 +29,7 @@ const SOCIALS = [
 export function Footer() {
   return (
     <footer className="bg-ink text-white/60">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
         <div>
           <div className="text-white">
             <Logo />
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
 
         <nav aria-label="Quick links">
-          <h3 className="headline text-lg text-white">Quick Links</h3>
+          <h3 className="headline text-h4 text-white">Quick Links</h3>
           <ul className="mt-5 space-y-3 text-sm">
             {QUICK_LINKS.map((l) => (
               <li key={l.label}>
@@ -71,7 +71,7 @@ export function Footer() {
         </nav>
 
         <nav aria-label="Categories">
-          <h3 className="headline text-lg text-white">Categories</h3>
+          <h3 className="headline text-h4 text-white">Categories</h3>
           <ul className="mt-5 space-y-3 text-sm">
             {getCategories().map((c) => (
               <li key={c.id}>
@@ -95,7 +95,7 @@ export function Footer() {
         </nav>
 
         <div>
-          <h3 className="headline text-lg text-white">Contact</h3>
+          <h3 className="headline text-h4 text-white">Contact</h3>
           <ul className="mt-5 space-y-3 text-sm">
             <li className="flex items-start gap-3">
               <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />

@@ -45,11 +45,11 @@ export default function AboutPage() {
           subtitle="NEXBOND Industrial Solutions LLC — industrial, safety and infrastructure solutions from Sharjah, United Arab Emirates."
         />
         <About />
-        <section className="bg-cream py-24">
+        <section className="bg-cream section-y">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <Reveal className="max-w-2xl">
               <p className="section-label">Our Values</p>
-              <h2 className="headline mt-4 text-4xl text-ink sm:text-5xl">
+              <h2 className="headline text-h2 mt-4 text-ink">
                 What We Stand <span className="text-gold">For.</span>
               </h2>
             </Reveal>
@@ -57,10 +57,10 @@ export default function AboutPage() {
               {VALUES.map((v, i) => (
                 <Reveal key={v.title} delay={i * 0.1}>
                   <div className="h-full rounded-2xl border border-ink/5 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-lg">
-                    <span className="headline text-4xl text-gold/30">
+                    <span className="headline text-h2 text-gold/30">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="headline mt-3 text-2xl text-ink">{v.title}</h3>
+                    <h3 className="headline text-h3 mt-3 text-ink">{v.title}</h3>
                     <p className="mt-2 text-sm text-warmgrey">{v.text}</p>
                   </div>
                 </Reveal>

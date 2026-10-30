@@ -10,12 +10,12 @@ const DIRECTIONS = `https://www.google.com/maps/search/?api=1&query=${encodeURIC
 
 export function LocationMap() {
   return (
-    <section aria-label="Our location" className="bg-ink py-24 sm:py-32">
+    <section aria-label="Our location" className="bg-ink section-y">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <p className="section-label">Find Us</p>
-            <h2 className="headline mt-4 text-4xl text-white sm:text-5xl">
+            <h2 className="headline text-h2 mt-4 text-white">
               Visit Our Office in <span className="text-gold">Dubai.</span>
             </h2>
             <p className="mt-5 flex items-center gap-2 text-white/60">

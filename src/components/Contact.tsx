@@ -39,13 +39,13 @@ export function Contact() {
     "w-full rounded-lg border border-ink/15 bg-white/80 px-4 py-3 text-sm text-ink placeholder:text-ink/40 outline-none transition focus:border-ink focus:bg-white";
 
   return (
-    <section id="contact" className="bg-gold py-24 sm:py-32">
+    <section id="contact" className="bg-gold section-y">
       <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <p className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-ink/60">
             Get In Touch
           </p>
-          <h2 className="headline mt-4 text-4xl text-ink sm:text-6xl">
+          <h2 className="headline text-h2 mt-4 text-ink">
             Ready to Build Stronger Bonds?
           </h2>
           <p className="mt-6 max-w-md text-ink/70">
@@ -76,7 +76,7 @@ export function Contact() {
             onSubmit={onSubmit}
             className="rounded-2xl bg-cream p-7 shadow-2xl shadow-ink/20 sm:p-9"
           >
-            <h3 className="headline text-2xl text-ink">Request a Quote</h3>
+            <h3 className="headline text-h3 text-ink">Request a Quote</h3>
             {product && (
               <p className="mt-2 inline-flex items-center gap-2 rounded-full bg-ink/5 px-3 py-1 text-xs font-semibold text-ink/70">
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" />

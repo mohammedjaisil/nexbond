@@ -49,11 +49,11 @@ export default function PrivacyPolicyPage() {
           subtitle="Last updated: July 2026"
           watermark="PRIVACY"
         />
-        <section className="bg-cream py-20">
+        <section className="bg-cream section-y">
           <div className="mx-auto max-w-3xl space-y-10 px-5 sm:px-8">
             {SECTIONS.map((s, i) => (
               <Reveal key={s.h} delay={i * 0.05}>
-                <h2 className="headline text-2xl text-ink">{s.h}</h2>
+                <h2 className="headline text-h3 text-ink">{s.h}</h2>
                 <p className="mt-3 leading-relaxed text-warmgrey">{s.p}</p>
               </Reveal>
             ))}

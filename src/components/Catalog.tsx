@@ -11,12 +11,12 @@ export function Catalog({ query }: { query?: string }) {
   if (q) {
     const results = searchProducts(q);
     return (
-      <section id="products" className="bg-cream py-14 sm:py-16">
+      <section id="products" className="bg-cream section-y">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="flex flex-col gap-4 border-b border-ink/10 pb-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="section-label">Search Results</p>
-              <h2 className="headline mt-2 text-2xl text-ink sm:text-3xl">
+              <h2 className="headline text-h3 mt-2 text-ink">
                 {results.length} {results.length === 1 ? "product" : "products"}{" "}
                 for <span className="text-gold">&ldquo;{q}&rdquo;</span>
               </h2>
@@ -37,7 +37,7 @@ export function Catalog({ query }: { query?: string }) {
             </div>
           ) : (
             <div className="mt-10 rounded-2xl border border-ink/10 bg-white p-10 text-center">
-              <p className="headline text-xl text-ink">No matches found</p>
+              <p className="headline text-h4 text-ink">No matches found</p>
               <p className="mx-auto mt-2 max-w-md text-sm text-warmgrey">
                 Try a broader term — &ldquo;tape&rdquo;, &ldquo;cones&rdquo;,
                 &ldquo;signs&rdquo;, &ldquo;paint&rdquo;, &ldquo;studs&rdquo; or
@@ -60,7 +60,7 @@ export function Catalog({ query }: { query?: string }) {
   const categories = getCategories();
 
   return (
-    <section id="products" className="bg-cream py-14 sm:py-16">
+    <section id="products" className="bg-cream section-y">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {/* Category jump bar */}
         <nav
@@ -87,7 +87,7 @@ export function Catalog({ query }: { query?: string }) {
                 <div className="flex items-end justify-between gap-4 border-b border-ink/10 pb-4">
                   <div>
                     <p className="section-label">{cat.name}</p>
-                    <h2 className="headline mt-1.5 text-2xl text-ink sm:text-3xl">
+                    <h2 className="headline text-h3 mt-1.5 text-ink">
                       {cat.blurb}
                     </h2>
                   </div>

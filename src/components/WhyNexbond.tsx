@@ -4,9 +4,9 @@ import { CheckIcon, XMarkIcon } from "./icons";
 /** The tape measurements are the clearest illustration of the promise. */
 const ROWS = [
   {
-    printed: "36 Yards",
+    printed: "30 Yards",
     others: "Less than 30 yards",
-    nexbond: "36 Yards — full length",
+    nexbond: "30 Yards — full length",
   },
   {
     printed: "50 MM",

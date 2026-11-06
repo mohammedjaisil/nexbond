@@ -25,7 +25,7 @@ type Slide = {
 const SLIDES: Slide[] = [
   {
     id: "all-ranges",
-    image: "/images/thermoplastic-marking.webp",
+    image: "/images/uae-sheikh-zayed-road.webp",
     eyebrow: "Six Ranges · One Supplier",
     title: "Everything the Site Needs.",
     accent: "Honestly Measured.",
@@ -89,7 +89,7 @@ const SLIDES: Slide[] = [
     eyebrow: "Masking Tape",
     title: "True Size.",
     accent: "True Trust.",
-    copy: "Full 50mm width. Full 36 yards. The range that started NEXBOND — general purpose, premium and heavy duty crepe tapes.",
+    copy: "Full 50mm width. Full 30 yards. The range that started NEXBOND — general purpose, premium and heavy duty crepe tapes.",
     cta: { label: "Shop Masking Tape", href: "/products#masking-tape" },
     note: "Full printed size · Bulk cartons",
   },
@@ -263,7 +263,7 @@ export function HeroSlider() {
           type="button"
           onClick={() => go(index - 1)}
           aria-label="Previous slide"
-          className="absolute bottom-3 right-[4.25rem] z-10 hidden rounded-full border border-white/20 bg-ink/70 p-2.5 text-white transition-colors hover:border-gold hover:text-gold sm:block"
+          className="absolute bottom-3 right-[4.25rem] z-20 hidden rounded-full border border-white/20 bg-ink/70 p-2.5 text-white transition-colors hover:border-gold hover:text-gold sm:block"
         >
           <ChevronLeftIcon className="h-4 w-4" />
         </button>
@@ -271,13 +271,13 @@ export function HeroSlider() {
           type="button"
           onClick={() => go(index + 1)}
           aria-label="Next slide"
-          className="absolute bottom-3 right-5 z-10 hidden rounded-full border border-white/20 bg-ink/70 p-2.5 text-white transition-colors hover:border-gold hover:text-gold sm:block"
+          className="absolute bottom-3 right-5 z-20 hidden rounded-full border border-white/20 bg-ink/70 p-2.5 text-white transition-colors hover:border-gold hover:text-gold sm:block"
         >
           <ChevronRightIcon className="h-4 w-4" />
         </button>
 
         {/* ---------- Dots ---------- */}
-        <div className="absolute inset-x-0 bottom-3 z-10 flex justify-center gap-1">
+        <div className="pointer-events-none absolute inset-x-0 bottom-3 z-10 flex justify-center gap-1">
           {SLIDES.map((s, i) => (
             <button
               key={s.id}
@@ -285,7 +285,7 @@ export function HeroSlider() {
               onClick={() => go(i)}
               aria-label={`Show ${s.eyebrow} slide`}
               aria-current={i === index}
-              className="group/dot px-1.5 py-4"
+              className="group/dot pointer-events-auto px-1.5 py-4"
             >
               <span
                 aria-hidden

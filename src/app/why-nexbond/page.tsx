@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Why NEXBOND — Honest by Choice, Trusted for Life",
   description:
-    "What others print vs. what NEXBOND delivers — full 36 yards and 50mm on every tape roll, certified hi-vis, high-intensity sign sheeting and hot-dip galvanized hardware across every range. No short measure. No downgrades.",
+    "What others print vs. what NEXBOND delivers — full 30 yards and 50mm on every tape roll, certified hi-vis, high-intensity sign sheeting and hot-dip galvanized hardware across every range. No short measure. No downgrades.",
 };
 
 export default function WhyNexbondPage() {

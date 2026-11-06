@@ -22,6 +22,7 @@ traceable.
 | `guardrails.webp` | https://www.pexels.com/photo/5302922/ |
 | `about-rolls.webp` | https://www.pexels.com/photo/4483608/ |
 | `why-measure.webp` | https://www.pexels.com/photo/30413398/ |
+| `uae-sheikh-zayed-road.webp` | https://www.pexels.com/photo/8319470/ |
 | `og-image.jpg` | https://www.pexels.com/photo/11054546/ |
 
 Each file is the full, uncropped photograph at up to 2560px wide (webp q76–86).

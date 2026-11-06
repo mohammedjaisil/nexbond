@@ -23,8 +23,8 @@ const CHANNELS = [
   {
     Icon: MailIcon,
     title: "Email Us",
-    line1: "info@nexbondinfra.com",
-    href: "mailto:info@nexbondinfra.com",
+    line1: "info@nexbond.com",
+    href: "mailto:info@nexbond.com",
   },
   {
     Icon: PinIcon,

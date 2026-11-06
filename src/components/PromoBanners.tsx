@@ -12,22 +12,22 @@ type Promo = {
 };
 
 const FEATURE: Promo = {
-  href: "/products#road-safety",
+  href: "/products#safety",
   image: "/images/speed-bumps.webp",
   eyebrow: "Road Safety & Traffic Calming",
   title: "Slow Traffic Down. Keep People Safe.",
   copy: "Reflective studs, rebounding delineators, rubber speed bumps and wheel stops — impact-rated and ready to bolt down.",
-  cta: "Shop Road Safety",
+  cta: "Shop Safety",
 };
 
 const SIDE: Promo[] = [
   {
-    href: "/products#signage",
+    href: "/products#signage-guard-rail",
     image: "/images/directional-signage.webp",
-    eyebrow: "Signage",
+    eyebrow: "Signage & Guard Rail",
     title: "Custom Signs, Made to Order",
     copy: "Any size, colour or legend on reflective aluminium.",
-    cta: "Shop Signage",
+    cta: "Shop Signage & Guard Rail",
   },
   {
     href: "/products#infrastructure",

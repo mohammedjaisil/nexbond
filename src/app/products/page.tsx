@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Products — NEXBOND | Tapes, Safety, Signage & Infrastructure",
   description:
-    "The complete NEXBOND catalogue across six ranges: masking tapes, high-visibility safety gear, reflective traffic and wayfinding signage, road marking materials, road studs, speed bumps, guardrails and galvanized hardware — request a quote on any product.",
+    "The complete NEXBOND catalogue across five ranges: industrial tapes, safety and PPE, reflective traffic and wayfinding signage, road marking materials, road studs, speed bumps, guardrails and galvanized hardware — request a quote on any product.",
 };
 
 type Props = { searchParams: Promise<{ q?: string }> };
@@ -24,7 +24,7 @@ export default async function ProductsPage({ searchParams }: Props) {
           label="Our Products"
           title="Engineered for Performance."
           accent="Built for Trust."
-          subtitle="Masking tapes, hi-vis safety gear, reflective signage, road marking materials, traffic calming and infrastructure hardware — six ranges, every item held to the same honest standard."
+          subtitle="Industrial tapes, safety gear and PPE, reflective signage, road marking materials and infrastructure hardware — five ranges, every item held to the same honest standard."
           watermark="PRODUCTS"
         />
         <Catalog query={q} />

@@ -31,7 +31,7 @@ export function Contact() {
     const body = encodeURIComponent(
       `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\n\nMessage:\n${data.get("message")}`
     );
-    window.location.href = `mailto:info@nexbondinfra.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@nexbond.com?subject=${subject}&body=${body}`;
     setSent(true);
   };
 
@@ -66,7 +66,7 @@ export function Contact() {
               NEXBOND Industrial Solutions LLC
             </p>
             <p>First Floor, 119, Al Garhoud Star Building, Al Garhoud, Dubai, United Arab Emirates</p>
-            <p>info@nexbondinfra.com</p>
+            <p>info@nexbond.com</p>
             <p>Rahul Kumar — Managing Director</p>
           </div>
         </Reveal>

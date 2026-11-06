@@ -120,10 +120,20 @@ export default async function ProductPage({ params }: Props) {
                   </div>
                   <span className="absolute right-8 top-8 rounded-full bg-gold/95 px-3 py-1.5 text-[0.7rem] font-bold uppercase tracking-wider text-ink shadow-lg">
                     ✓{" "}
-                    {product.category === "Masking Tape"
+                    {product.slug.includes("masking-tape")
                       ? "True Size Guaranteed"
                       : "True to Spec"}
                   </span>
+                  {product.imageCredit && (
+                    <a
+                      href={product.imageCredit.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 block text-right text-[0.65rem] text-white/40 hover:text-white/70"
+                    >
+                      {product.imageCredit.text}
+                    </a>
+                  )}
                 </div>
 
                 <div className="mt-4 grid grid-cols-3 gap-3">

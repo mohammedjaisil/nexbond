@@ -6,7 +6,7 @@ Six ranges, one standard — *"What the label says is what you get."*
 
 | Range | Examples |
 | --- | --- |
-| Masking Tape | General purpose, premium, heavy duty crepe tapes |
+| Industrial Tapes | Masking (general purpose, automotive grade), filament, electrical and warning tapes |
 | Safety | Hi-vis vests, hard hats, traffic cones |
 | Signage | Reflective traffic signs, directional & wayfinding signs |
 | Road Marking | Thermoplastic compound, cold-applied paint, glass beads |

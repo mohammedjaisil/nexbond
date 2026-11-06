@@ -25,11 +25,11 @@ type Slide = {
 const SLIDES: Slide[] = [
   {
     id: "all-ranges",
-    image: "/images/uae-sheikh-zayed-road.webp",
-    eyebrow: "Six Ranges · One Supplier",
+    image: "/images/hero-tapes.webp",
+    eyebrow: "Five Ranges · One Supplier",
     title: "Everything the Site Needs.",
     accent: "Honestly Measured.",
-    copy: "Masking tapes, hi-vis safety gear, reflective signage, road marking, traffic calming and infrastructure hardware — stocked in Sharjah and supplied in bulk.",
+    copy: "Industrial tapes, hi-vis safety gear, reflective signage, road marking, traffic calming and infrastructure hardware — stocked in Sharjah and supplied in bulk.",
     cta: { label: "Shop All Products", href: "/products" },
     note: "",  // filled from the live catalogue count
   },
@@ -50,7 +50,7 @@ const SLIDES: Slide[] = [
     title: "Seen Day",
     accent: "and Night.",
     copy: "High-intensity prismatic signs on rust-proof aluminium — standard layouts or custom-printed to GCC standards, with posts and fixings.",
-    cta: { label: "Shop Signage", href: "/products#signage" },
+    cta: { label: "Shop Signage & Guard Rail", href: "/products#signage-guard-rail" },
     note: "Custom printing · Complete kits",
   },
   {
@@ -70,7 +70,7 @@ const SLIDES: Slide[] = [
     title: "Guide It.",
     accent: "Slow It Down.",
     copy: "Reflective road studs, rebounding delineator posts, rubber speed bumps and wheel stops — impact-rated and ready to bolt down.",
-    cta: { label: "Shop Road Safety", href: "/products#road-safety" },
+    cta: { label: "Shop Safety", href: "/products#safety" },
     note: "Solar-LED options · Heavy-vehicle rated",
   },
   {
@@ -84,13 +84,13 @@ const SLIDES: Slide[] = [
     note: "Grade 8.8 / 10.9 · Boxed or bulk",
   },
   {
-    id: "masking-tape",
+    id: "industrial-tapes",
     image: "/images/tape-premium.webp",
-    eyebrow: "Masking Tape",
+    eyebrow: "Industrial Tapes",
     title: "True Size.",
     accent: "True Trust.",
-    copy: "Full 50mm width. Full 30 yards. The range that started NEXBOND — general purpose, premium and heavy duty crepe tapes.",
-    cta: { label: "Shop Masking Tape", href: "/products#masking-tape" },
+    copy: "Masking, filament, electrical, warning and reflective tapes — the range that started NEXBOND, with full 50mm × 30 yard masking rolls.",
+    cta: { label: "Shop Industrial Tapes", href: "/products#industrial-tapes" },
     note: "Full printed size · Bulk cartons",
   },
 ];

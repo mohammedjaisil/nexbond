@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PRODUCTS, getCategories } from "@/lib/products";
+import { PRODUCTS } from "@/lib/products";
 import { CountUp } from "./CountUp";
 import { Reveal } from "./Reveal";
 import { ArrowRightIcon } from "./icons";
 
 // Counts come from the catalogue so they can never drift out of date.
 const STATS = [
-  { value: getCategories().length, suffix: "", label: "Product Ranges" },
+  { value: 25, suffix: "+", label: "Years Experience" },
   { value: PRODUCTS.length, suffix: "", label: "Products In Stock" },
   { value: 100, suffix: "%", label: "True to Spec" },
 ];
@@ -47,11 +47,13 @@ export function About() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-6 max-w-xl leading-relaxed text-warmgrey">
+              Backed by 25 years of visionary experience in the industry,
               NEXBOND Industrial Solutions LLC is a UAE-based supplier of
-              industrial, safety and infrastructure products — masking tapes,
-              hi-vis gear, reflective signage, road marking materials, traffic
-              calming and structural hardware. We started with a simple
-              conviction: trust is built into the details. So we deliver exactly
+              industrial, safety and infrastructure products — industrial
+              tapes, PPE and safety equipment, signage and guard rail, road
+              marking materials and structural hardware. Over a quarter of a
+              century, one conviction has guided us: trust is built into the
+              details. So we deliver exactly
               what we promise — in every roll, every carton, every pallet. No
               short lengths. No downgraded materials. No fine print.
             </p>

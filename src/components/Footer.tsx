@@ -109,10 +109,10 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <MailIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <a
-                href="mailto:info@nexbondinfra.com"
+                href="mailto:info@nexbond.com"
                 className="-my-1 py-1 transition-colors hover:text-gold"
               >
-                info@nexbondinfra.com
+                info@nexbond.com
               </a>
             </li>
             <li className="flex items-start gap-3">
@@ -142,6 +142,9 @@ export function Footer() {
             </Link>
             <Link href="/terms" className="py-1.5 transition-colors hover:text-gold">
               Terms of Use
+            </Link>
+            <Link href="/image-credits" className="py-1.5 transition-colors hover:text-gold">
+              Image Credits
             </Link>
             <p className="rounded-full border border-gold/40 px-4 py-1.5 font-bold uppercase tracking-[0.2em] text-gold">
               Made in UAE

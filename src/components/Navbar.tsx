@@ -78,11 +78,11 @@ export function Navbar() {
               WhatsApp
             </a>
             <a
-              href="mailto:info@nexbondinfra.com"
+              href="mailto:info@nexbond.com"
               className="inline-flex items-center gap-1.5 py-1 transition-colors hover:text-gold"
             >
               <MailIcon className="h-3.5 w-3.5" />
-              info@nexbondinfra.com
+              info@nexbond.com
             </a>
           </div>
         </div>

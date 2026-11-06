@@ -29,11 +29,11 @@ const SECTIONS = [
   },
   {
     h: "Your Rights",
-    p: "You may request access to, correction of, or deletion of your personal information at any time by contacting us at info@nexbondinfra.com.",
+    p: "You may request access to, correction of, or deletion of your personal information at any time by contacting us at info@nexbond.com.",
   },
   {
     h: "Contact",
-    p: "For any privacy-related questions, contact NEXBOND Industrial Solutions LLC, First Floor, 119, Al Garhoud Star Building, Al Garhoud, Dubai, United Arab Emirates — info@nexbondinfra.com.",
+    p: "For any privacy-related questions, contact NEXBOND Industrial Solutions LLC, First Floor, 119, Al Garhoud Star Building, Al Garhoud, Dubai, United Arab Emirates — info@nexbond.com.",
   },
 ];
 

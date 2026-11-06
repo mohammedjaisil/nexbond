@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title:
     "NEXBOND — Industrial, Safety & Infrastructure Supplies | Sharjah, UAE",
   description:
-    "NEXBOND Industrial Solutions LLC, Sharjah UAE. Masking tapes, hi-vis safety gear, reflective traffic signage, road marking materials, traffic calming and infrastructure hardware — supplied in bulk across the UAE from Sharjah. What the label says is what you get.",
+    "NEXBOND Industrial Solutions LLC, Sharjah UAE. Industrial tapes, hi-vis safety gear, reflective traffic signage, road marking materials, traffic calming and infrastructure hardware — supplied in bulk across the UAE from Sharjah. What the label says is what you get.",
   keywords: [
     "industrial supplies UAE",
     "safety equipment Sharjah",
@@ -33,12 +33,16 @@ export const metadata: Metadata = {
     "galvanized infrastructure hardware",
     "hi-vis safety gear Sharjah",
     "masking tape UAE",
+    "industrial tapes UAE",
+    "filament tape UAE",
+    "electrical tape UAE",
+    "warning tape UAE",
     "NEXBOND",
   ],
   openGraph: {
     title: "NEXBOND — Industrial, Safety & Infrastructure Supplies",
     description:
-      "Six ranges from one UAE supplier: masking tape, safety gear, signage, road marking, traffic calming and infrastructure hardware. True to spec, every order.",
+      "Five ranges from one UAE supplier: industrial tapes, safety gear, signage, road marking, traffic calming and infrastructure hardware. True to spec, every order.",
     url: "https://nexbondinfra.com",
     siteName: "NEXBOND",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
@@ -62,7 +66,7 @@ const jsonLd = {
   description:
     "Supplier of industrial tapes, high-visibility safety gear, reflective traffic signage, road marking materials, traffic calming products and infrastructure hardware in Sharjah, UAE.",
   url: "https://nexbondinfra.com",
-  email: "info@nexbondinfra.com",
+  email: "info@nexbond.com",
   telephone: "+97142868633",
   address: {
     "@type": "PostalAddress",

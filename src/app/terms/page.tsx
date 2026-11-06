@@ -17,7 +17,7 @@ const SECTIONS = [
   },
   {
     h: "Use of Content",
-    p: "All content on this website — text, images, logos and product information — is the property of NEXBOND Industrial Solutions LLC. It may not be reproduced, distributed or used commercially without our prior written consent.",
+    p: "All content on this website — text, images, logos and product information — is the property of NEXBOND Industrial Solutions LLC, except third-party photographs, which are used under their own licences as listed on our Image Credits page. Our content may not be reproduced, distributed or used commercially without our prior written consent.",
   },
   {
     h: "Product Information",

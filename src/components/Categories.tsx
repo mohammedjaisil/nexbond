@@ -6,18 +6,16 @@ import {
   ConeIcon,
   PaintIcon,
   RoadIcon,
-  RoadStudIcon,
   SignIcon,
   TapeIcon,
   ArrowRightIcon,
 } from "./icons";
 
 const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
-  "Masking Tape": TapeIcon,
+  "Industrial Tapes": TapeIcon,
   Safety: ConeIcon,
-  Signage: SignIcon,
+  "Signage & Guard Rail": SignIcon,
   "Road Marking": PaintIcon,
-  "Road Safety": RoadStudIcon,
   Infrastructure: RoadIcon,
 };
 
@@ -35,12 +33,12 @@ export function Categories() {
           <div className="max-w-2xl">
             <p className="section-label">Shop by Category</p>
             <h2 className="headline text-h2 mt-3 text-ink">
-              Six Ranges.{" "}
+              Five Ranges.{" "}
               <span className="text-gold">One Honest Standard.</span>
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-warmgrey">
-            From masking tape to crash barriers — every line stocked in Sharjah
+            From industrial tapes to crash barriers — every line stocked in Sharjah
             and supplied in bulk.
           </p>
         </div>

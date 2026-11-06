@@ -11,7 +11,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About Us — NEXBOND | Strength in Every Bond",
   description:
-    "NEXBOND Industrial Solutions LLC is a UAE-based provider of industrial, safety and infrastructure solutions built on one conviction: what we promise, we deliver.",
+    "NEXBOND Industrial Solutions LLC brings 25 years of visionary experience to industrial, safety and infrastructure supply in the UAE, built on one conviction: what we promise, we deliver.",
 };
 
 const VALUES = [
@@ -42,7 +42,7 @@ export default function AboutPage() {
           label="Who We Are"
           title="Building Stronger Connections"
           accent="For a Safer Tomorrow."
-          subtitle="NEXBOND Industrial Solutions LLC — industrial, safety and infrastructure solutions from Sharjah, United Arab Emirates."
+          subtitle="25 years of visionary experience in industrial, safety and infrastructure solutions — from Sharjah, United Arab Emirates."
         />
         <About />
         <section className="bg-cream section-y">

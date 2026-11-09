@@ -11,10 +11,6 @@ licence. The full-size PNG originals are kept in `assets/product-originals/`
 The same applies to `hero-tapes.webp`, `about-rolls.webp` and `why-measure.webp`
 (converted at full size).
 
-**Exception:** `electrical-tape.webp` is still the public-domain photo
-https://commons.wikimedia.org/wiki/File:Electrical-tape_black.jpg, because no studio shot
-has been made for it yet.
-
 ## Banner photos (`scene-*.webp`)
 
 The home-page hero slides and promo banners use these full-bleed photographs

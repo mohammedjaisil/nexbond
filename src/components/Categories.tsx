@@ -43,7 +43,7 @@ export function Categories() {
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {categories.map((c) => {
             const Icon = ICONS[c.name] ?? TapeIcon;
             return (

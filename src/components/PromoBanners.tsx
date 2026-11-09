@@ -13,7 +13,7 @@ type Promo = {
 
 const FEATURE: Promo = {
   href: "/products#safety",
-  image: "/images/speed-bumps.webp",
+  image: "/images/scene-speed-bumps.webp",
   eyebrow: "Road Safety & Traffic Calming",
   title: "Slow Traffic Down. Keep People Safe.",
   copy: "Reflective studs, rebounding delineators, rubber speed bumps and wheel stops — impact-rated and ready to bolt down.",
@@ -23,7 +23,7 @@ const FEATURE: Promo = {
 const SIDE: Promo[] = [
   {
     href: "/products#signage-guard-rail",
-    image: "/images/directional-signage.webp",
+    image: "/images/scene-directional-signage.webp",
     eyebrow: "Signage & Guard Rail",
     title: "Custom Signs, Made to Order",
     copy: "Any size, colour or legend on reflective aluminium.",
@@ -31,7 +31,7 @@ const SIDE: Promo[] = [
   },
   {
     href: "/products#infrastructure",
-    image: "/images/infrastructure-hardware.webp",
+    image: "/images/scene-infrastructure-hardware.webp",
     eyebrow: "Infrastructure",
     title: "Galvanized Hardware & Barriers",
     copy: "High-tensile fixings and W-beam guardrail systems.",

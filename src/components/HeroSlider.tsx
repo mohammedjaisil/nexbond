@@ -35,7 +35,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: "safety",
-    image: "/images/safety-gear.webp",
+    image: "/images/scene-safety-gear.webp",
     eyebrow: "Safety & Hi-Vis",
     title: "Kit Out the Crew.",
     accent: "Site Ready.",
@@ -45,7 +45,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: "signage",
-    image: "/images/directional-signage.webp",
+    image: "/images/scene-directional-signage.webp",
     eyebrow: "Traffic & Wayfinding Signage",
     title: "Seen Day",
     accent: "and Night.",
@@ -55,7 +55,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: "road-marking",
-    image: "/images/road-marking-paint.webp",
+    image: "/images/scene-road-marking-paint.webp",
     eyebrow: "Road Marking",
     title: "Lines That",
     accent: "Last Longer.",
@@ -65,7 +65,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: "road-safety",
-    image: "/images/road-studs.webp",
+    image: "/images/scene-road-studs.webp",
     eyebrow: "Road Safety & Traffic Calming",
     title: "Guide It.",
     accent: "Slow It Down.",
@@ -75,7 +75,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: "infrastructure",
-    image: "/images/infrastructure-hardware.webp",
+    image: "/images/scene-infrastructure-hardware.webp",
     eyebrow: "Infrastructure Hardware",
     title: "Built to Hold",
     accent: "for Decades.",
@@ -85,7 +85,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: "industrial-tapes",
-    image: "/images/tape-premium.webp",
+    image: "/images/scene-tape-premium.webp",
     eyebrow: "Industrial Tapes",
     title: "True Size.",
     accent: "True Trust.",

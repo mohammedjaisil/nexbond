@@ -235,10 +235,6 @@ export const PRODUCTS: Product[] = [
     name: "Detectable Underground Warning Tape",
     category: "Industrial Tapes",
     image: "/images/detectable-warning-tape.webp",
-    imageCredit: {
-      text: "Photo: LouScheffer, CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Detectable_Tape.jpg",
-    },
     tagline: "Find It Before You Hit It",
     description:
       "Tracer-wire warning tape that metal detectors can locate underground.",
@@ -785,7 +781,6 @@ export const PRODUCTS: Product[] = [
     name: "Traffic Baton",
     category: "Safety",
     image: "/images/traffic-baton.webp",
-    imageCredit: { text: "Photo: CCY18999, CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:EGAS_marshalling_wands_at_Songshan_Airport_20111122.jpg" },
     tagline: "Direct With Light",
     description:
       "LED light batons for directing traffic and marshalling vehicles.",
@@ -915,7 +910,6 @@ export const PRODUCTS: Product[] = [
     name: "Reflective Traffic Signs",
     category: "Signage & Guard Rail",
     image: "/images/traffic-signs.webp",
-    imageCredit: { text: "Photo: Diego Delso, CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Stop_sign-Dubai3052.JPG" },
     tagline: "Clear at Every Distance",
     featured: true,
     description:
@@ -1013,7 +1007,6 @@ export const PRODUCTS: Product[] = [
     name: "Ground Mounted Signs (GMS)",
     category: "Signage & Guard Rail",
     image: "/images/ground-mounted-signs.webp",
-    imageCredit: { text: "Photo: Rizwan Ullah Wazir, CC BY 3.0", href: "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_-_Shahama_Road_to_Dubai_-_United_Arab_Emirates_-_panoramio_(4).jpg" },
     tagline: "Big Signs. Clear Directions.",
     description:
       "Large post-mounted guide and direction signs for roads and highways.",
@@ -1046,7 +1039,6 @@ export const PRODUCTS: Product[] = [
     name: "W-Beam Guard Rail",
     category: "Signage & Guard Rail",
     image: "/images/w-beam-guard-rail.webp",
-    imageCredit: { text: "Photo: Arubajalil, CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Al_Ain_Dubai_Highway.jpg" },
     tagline: "The Standard Road Barrier",
     description:
       "Galvanised W-beam steel guard rail for roadsides and medians.",
@@ -1175,7 +1167,6 @@ export const PRODUCTS: Product[] = [
     name: "Cold Road Marking Paint",
     category: "Road Marking",
     image: "/images/road-marking-paint.webp",
-    imageCredit: { text: "Photo: AdnanDekedek, CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_Roads.jpg" },
     tagline: "Lines That Last",
     featured: true,
     description:

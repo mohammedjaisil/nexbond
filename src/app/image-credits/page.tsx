@@ -10,13 +10,20 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-// Built from the catalogue, so every product photo whose licence requires
-// attribution is credited here as well as on its product page. These photos
-// are also reused on the home page and category tiles.
-const CREDITS = PRODUCTS.filter((p) => p.imageCredit).map((p) => ({
-  name: p.name,
-  ...p.imageCredit!,
-}));
+// Built from the catalogue (any product photo whose licence requires
+// attribution), plus the home-page banner photos listed by hand.
+const CREDITS = [
+  ...PRODUCTS.filter((p) => p.imageCredit).map((p) => ({
+    name: p.name,
+    ...p.imageCredit!,
+  })),
+  // Home-page banner photos that are not product images.
+  {
+    name: "Road Marking (home page banner)",
+    text: "Photo: AdnanDekedek, CC BY-SA 4.0",
+    href: "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_Roads.jpg",
+  },
+];
 
 export default function ImageCreditsPage() {
   return (
@@ -51,7 +58,7 @@ export default function ImageCreditsPage() {
               ))}
             </ul>
             <p className="mt-6 text-sm leading-relaxed text-warmgrey">
-              All other photographs are licensed from{" "}
+              Product images belong to NEXBOND. Other photographs are licensed from{" "}
               <a
                 href="https://www.pexels.com/license/"
                 target="_blank"
